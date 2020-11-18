@@ -131,7 +131,7 @@ if (mysqli_num_rows($list)>0)
 {
 while($result=mysqli_fetch_array($list)){
 	
- if($_SESSION['name']==$result['name']){                        				//differentiate color for user and others using session cookie
+ if($_SESSION['name']==$result['name']){                        				//differentiate color for user using session cookie
       echo "
 		<tr>
 		<td>
