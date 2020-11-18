@@ -2,7 +2,7 @@
 session_start();
 if(!isset($_SESSION['name']))
   header("Location:index.php");  //redirecting to login page if user is not logged in
-?>                               //especially useful if login has passwords
+?>                               
 <html>
 <head>
 <title>Chat</title>
@@ -59,55 +59,55 @@ if(!isset($_SESSION['name']))
 
 </style>
 
-<script>                                                              //three lines to prevent form resubmission on reload
-if ( window.history.replaceState ) {                                  //javascript code source:www.webtrickshome.com
+<script>                                                              	  //three lines to prevent form resubmission on reload
+if ( window.history.replaceState ) {                                  	  //javascript code source:www.webtrickshome.com
   window.history.replaceState( null, null, window.location.href );
 }
 </script>
 
 </head>
-<body onload="scrollWin()">                                           //calling a function to loads window.php file
+<body onload="scrollWin()">                                                <!-- calling a function to load window.php file -->
 
 <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
 <script type="text/javascript">   
-    var auto_refresh = setInterval(                                   //window.php is refreshed to display continous data.
+    var auto_refresh = setInterval(                                   	   //window.php is refreshed to display continous data.
     function ()
     {$('#Status').load('window.php');
     },1000); 
 </script> 
   
-<script type="text/javascript">                                       //script to make window.php scroll down to bottom on load
+<script type="text/javascript">                                       	   //script to make window.php scroll down to bottom on load
     function scrollWin(){
      document.querySelector("#Status").scrollTop = document.querySelector("#Status").scrollHeight;
     }; 
 </script>  
   
 
-<div id="Status"  onload="scrollWin()"><br><br>                        //the element where scroll function is applied.
-<?php include('window.php'); ?><img src="load.gif" width="25px" height="25px" style="margin-left:20%;"> //a little animation
+<div id="Status"  onload="scrollWin()"><br><br>                        	   <!-- the element where scroll function is applied. -->
+<?php include('window.php'); ?><img src="load.gif" width="25px" height="25px" style="margin-left:20%;"> <!-- a little animation -->
 </div>
 
  
-<form action="text.php" method="post">                                     //this is where text.php starts.
-<input type="text" name="message" value="" size="35" autocomplete="off">   //getting message from user
+<form action="text.php" method="post">                                     <!-- this is where text.php starts. -->
+<input type="text" name="message" value="" size="35" autocomplete="off">   <!-- getting message from user -->
 <input type="submit" value="send">
 </form>
 
 
 
 <?php
-$conn=mysqli_connect("host","user","password","db");                      //establishing connection
-date_default_timezone_set("Asia/Kolkata");                                //defining time zone
+$conn=mysqli_connect("host","user","password","db");                      	//establishing connection
+date_default_timezone_set("Asia/Kolkata");                                	//defining time zone
 
 if($_SERVER['REQUEST_METHOD']=="POST"){
-	if(isset($_POST['message']) AND !empty($_POST['message'])){           //on receiving data from user
+	if(isset($_POST['message']) AND !empty($_POST['message'])){           	//on receiving data from user
 
     $name=$_SESSION['name'];
-	$message=$_POST['message'];                                           //storing name, message, date
+	$message=$_POST['message'];                                           	//storing name, message, date
 	$time=date("l h:i:sa");
 
-    $list=file_get_contents("profan.txt");                                //basic profanity check
-    $me=explode(" ",$message);                                            //for more details check my repo: bleepblop
+    $list=file_get_contents("profan.txt");                               	//basic profanity check
+    $me=explode(" ",$message);                                            	//for more details check my repo: bleepblop
     $length = count($me);
 	$censored='';
     for ($i = 0; $i < $length; $i++)
