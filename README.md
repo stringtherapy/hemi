@@ -1,5 +1,5 @@
 # hemi[https://hemi.ga]
-<h1>Open Source Web Messenger</h1> 
+<h2>Open Source Web Messenger</h2> 
 
 Optimised for Mobile.
 
