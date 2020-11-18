@@ -5,15 +5,15 @@
     <style>
     body{
     text-align:center;
-    height: 100%; background-position: center;
+    height: 100%;
+    background-color: #404040;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    color:white;
-    }
+    background-image:url("https://source.unsplash.com/random/1136x640");
+    }                       <!-- random images from Unsplash API -->
     </style>
 </head>
-<body style="background: #404040 center / cover no-repeat;background-image:url(https://source.unsplash.com/random/1136x640)">  
-	<!-- for random images from Unsplash API -->
 
 <form action="index.php" method="post">
 <br>
@@ -24,46 +24,47 @@
 </form>
 
 <?php
-$rand=rand(1,25);  
-$conn=mysqli_connect("host","user","pass","db");   
+$rand=rand(1,25);                                                   //generating random number for later use
+$conn=mysqli_connect("host","user","pass","db");                    //establishing connection to any database
 
-if($_SERVER['REQUEST_METHOD']=="POST")
+if($_SERVER['REQUEST_METHOD']=="POST")                              //on submission
 {
-    if(isset($_POST['name']) AND !empty($_POST['name'])){
-	$name=$_POST['name'];
+    if(isset($_POST['name']) AND !empty($_POST['name'])){           //if name is not empty
+	$name=$_POST['name'];                                           //storing the user name in variable
     
+    
+    //checking for profanity (basic version)
     $list=file_get_contents("profan.txt");
-
+                                                                    
     $me=explode(" ",$name);
     $length = count($me);
 	$var=0;
 	
-    //check loop
     for ($i = 0; $i < $length; $i++)
 		
 		{
 			if(strlen($me[$i]) >= 4){
 			$me2[$i] = "/$me[$i]/i";
 			if(preg_match($me2[$i], $list)==1){
-                $var .= $var++;			            //signal
+                $var .= $var++;
                 }
 			
 		} 
         }
-    //check loop
-
-
     if($var!== 0){
         echo "please try again";
     }
+    //End of profanity check.
+    //For more details and improvised version check my repo:bleepblop
+        
     else{
-	session_start();
-	$_SESSION['name']=$name;
-    $_SESSION['rand']=$rand; //here
-  	mysqli_query($conn,"INSERT INTO friends(name)VALUES('$name')");
-	header("Location:textpro.php");
+	session_start();                                                    //starting session to store user input as cookie
+	$_SESSION['name']=$name;                                            //storing username
+    $_SESSION['rand']=$rand;                                            //storing the random number unique to this login
+  	mysqli_query($conn,"INSERT INTO friends(name)VALUES('$name')");     //registering the user into database
+	header("Location:text.php");                                        //redirecting to chat area
     } 
-    } else echo "please enter your name";
+    } else echo "please enter your name";                               //if user returns empty data
 }
 ?>
 </body>
