@@ -2,7 +2,7 @@
 session_start();
 if(!isset($_SESSION['name']))
   header("Location:index.php");
-$rand = $_SESSION['rand']; //here
+$rand = $_SESSION['rand']; //getting the random number from index.php
 ?>
 <html>
 <head>
@@ -10,12 +10,11 @@ $rand = $_SESSION['rand']; //here
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-
 *{
   margin:0px;
   padding:0px;
     }
-    #boxg{
+#boxg{
 border:0px solid black;
 background-color:#5081BC;
 opacity:0.85;
@@ -31,7 +30,7 @@ position: relative;
 overflow: hidden;
 height: 100%;}  
     
-        #boxb{
+#boxb{
 border:0px solid black;
 background-color:#f07142;
 opacity:0.85;
@@ -49,7 +48,7 @@ position: relative;
 overflow: hidden;
 height: 100%;} 
 
-        #imgg{
+#imgg{
 border:0px solid black;
 background-color:transparent;
 border-radius:20px;
@@ -64,7 +63,7 @@ position: relative;
 overflow: hidden;
 height: 100%;} 
 
-        #imgb{
+#imgb{
 border:0px solid black;
 background-color:transparent;
 border-radius:20px;
@@ -81,71 +80,58 @@ overflow: hidden;
 height: 100%;} 
 
 body{
-    background-color: #404040;
+background-color: #404040;
 }
 
 #w{
-
-    font-family:Georgia;
-   font-size:11px;
-   font-color:black;
-    font-style: italic;
-   // font-style: bold;
-//float:right;
-//display:inline;
+font-family:Georgia;
+font-size:11px;
+font-color:black;
+font-style: italic;
 position:absolute;
 bottom: 10%;
 z-index:99;
-    //color:#5D6D7E;
-    background-color:#b3ffb3; 
-//opacity:50%;
+background-color:#b3ffb3;
 }
 
 alert {
-
-   // color:green;
-    position:absolute;
-   // bottom: 10%;
-    //font-size:30px;
-    z-axis:99;
-  //margin-left:70;
-    bottom: 20%;
-   right: 20%;
-    background-color:#ff99ff; 
-    color:white;
-    font-family:Georgia;
- //   font-style:italic;
-    border:0px solid black;
-    border-radius:25px;
-    padding:10px;
-    opacity:80%;
-
+position:absolute;
+z-axis:99;
+bottom: 20%;
+right: 20%;
+background-color:#ff99ff;
+color:white;
+font-family:Georgia;
+font-style:italic;
+border:0px solid black;
+border-radius:25px;
+padding:10px;
+opacity:80%;
 }
 
 table {
-    border-collapse: collapse;
-  overflow:auto;
+border-collapse: collapse;
+overflow:auto;
 }
 
 td {
-    padding-top: .5em;
-    padding-bottom: .5em;
+padding-top: .5em;
+padding-bottom: .5em;
 }   
-  </style>
-
+</style>
 
 </head>
 <table>
 <th></th>
 
 <?php 
-$conn=mysqli_connect("sql307.epizy.com","epiz_27163442","migRiVCK3Bs","epiz_27163442_saga");
+$conn=mysqli_connect("host","user","password","db");                   // part 1: displaying the table of chat data stored in SQL
 $list=mysqli_query($conn,"SELECT * FROM chathistory ORDER BY ID ASC");
 if (mysqli_num_rows($list)>0)
 {
 while($result=mysqli_fetch_array($list)){
 	
- if($_SESSION['name']==$result['name']){
+ if($_SESSION['name']==$result['name']){                        //differentiate color for user and others using session cookie
       echo "
 		<tr>
 		<td>
@@ -169,63 +155,53 @@ while($result=mysqli_fetch_array($list)){
 
     }
     }
-  //  echo "<h1>". $rand."</h1>";    
-
 ?>
 
-  </table>
+</table>
 
-  <form action="" method="post">
+<form action="" method="post">
 <input type="submit" name="signal" value="refresh" id="w">
 </form>
 
-<?php
-$randnew= rand(1,25);
+<?php                                                       //part 2: allowing user to change the background
+$randnew= rand(1,25);                                       //generating a new random number
 $var=0;
 if(isset($_POST['signal']))
 {
 	$var .= $var++;
 }
 if($var!==0){	
-	$rand = $randnew;	
+	$rand = $randnew;	                                   //changing the original random number
 }
 
-    echo"<body style=background-image:url(img/$rand.jpg); 
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;></body>";
+echo"<body style=background-image:url(img/$rand.jpg);></body>"; //the random number directly corresponds to 1 of 25 images
 
 ?>
 
-<?php
-$res = mysqli_query($conn,"SELECT count(1) FROM chathistory");
+<?php                                                                  //part 3: to get real time notification
+$res = mysqli_query($conn,"SELECT count(1) FROM chathistory");         //to identify change in sql table
 $row = mysqli_fetch_array($res);
-$total = $row[0];
+$total = $row[0];                                                       //getting the count in total variable
 
-if(!isset($_SESSION['count'])) {
-        $check = $_SESSION['count'] = $total;
+if(!isset($_SESSION['count'])) {                                        //a session variable to keep check on count
+        $check = $_SESSION['count'] = $total;                           //storing it in check variable
     } else {
         $check = $_SESSION['count'];
     }
 
 // echo $total;
-     if($total > $check ) { 
+     if($total > $check ) {                                             //comparing total and check
         $check = $_SESSION['count'] = $total;
-        $recent = mysqli_query($conn,"SELECT * FROM chathistory ORDER BY ID DESC LIMIT 1");
+        $recent = mysqli_query($conn,"SELECT * FROM chathistory ORDER BY ID DESC LIMIT 1"); //getting the last user details
         $check=mysqli_fetch_array($recent);
        // echo $check["name"];
-        if($_SESSION['name']==$check["name"]){
+        if($_SESSION['name']==$check["name"]){                                 //if the message is from user ignore
             //echo"<alert>message sent!</alert>";
         }
-       //echo "<alert><img src=amaz.gif width=48px height=48px></alert>";
-        else { echo 
+        else { echo                                                            //if not trigger notification along with name
         "<alert onclick=scrollWin()>new message from $check[name] &#8595;</alert><br>";
         }
-
-     } else {
-  // echo "<alert><img src=gif3.gif width=28px height=28px></alert>";
-// echo "<alert>new message!</alert>";
-     }
+     } 
 ?>
   
 </html>
