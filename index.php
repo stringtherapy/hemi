@@ -9,11 +9,11 @@
     background-repeat: no-repeat;
     background-size: cover;
     color:white;
-    //background-blend-mode: luminosity;
     }
     </style>
 </head>
-<body style="background:  #404040 center / cover no-repeat;background-image:url(https://source.unsplash.com/random/1136x640)">
+<body style="background: #404040 center / cover no-repeat;background-image:url(https://source.unsplash.com/random/1136x640)">  
+	<!-- for random images from Unsplash API -->
 
 <form action="index.php" method="post">
 <br>
@@ -24,8 +24,8 @@
 </form>
 
 <?php
-$rand=rand(1,25);  //here
-$conn=mysqli_connect("sql307.epizy.com","epiz_27163442","migRiVCK3Bs","epiz_27163442_saga");
+$rand=rand(1,25);  
+$conn=mysqli_connect("host","user","pass","db");   
 
 if($_SERVER['REQUEST_METHOD']=="POST")
 {
