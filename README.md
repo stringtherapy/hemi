@@ -7,4 +7,6 @@ Highly customisable, PHP powered, Built from scratch.
 
 Source code beginner friendly. 
 
-Real-time notification and profanity detection.
+Real-time notification.
+
+Inbuilt profanity detection.
