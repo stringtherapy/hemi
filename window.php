@@ -2,7 +2,7 @@
 session_start();
 if(!isset($_SESSION['name']))
   header("Location:index.php");
-$rand = $_SESSION['rand']; //getting the random number from index.php
+$rand = $_SESSION['rand']; 									//getting the random number from index.php
 ?>
 <html>
 <head>
@@ -125,13 +125,13 @@ padding-bottom: .5em;
 <th></th>
 
 <?php 
-$conn=mysqli_connect("host","user","password","db");                   // part 1: displaying the table of chat data stored in SQL
+$conn=mysqli_connect("host","user","password","db");                   				// part 1: displaying the table of chat data stored in SQL
 $list=mysqli_query($conn,"SELECT * FROM chathistory ORDER BY ID ASC");
 if (mysqli_num_rows($list)>0)
 {
 while($result=mysqli_fetch_array($list)){
 	
- if($_SESSION['name']==$result['name']){                        //differentiate color for user and others using session cookie
+ if($_SESSION['name']==$result['name']){                        				//differentiate color for user and others using session cookie
       echo "
 		<tr>
 		<td>
@@ -163,42 +163,42 @@ while($result=mysqli_fetch_array($list)){
 <input type="submit" name="signal" value="refresh" id="w">
 </form>
 
-<?php                                                       //part 2: allowing user to change the background
-$randnew= rand(1,25);                                       //generating a new random number
+<?php                                                       					//part 2: allowing user to change the background
+$randnew= rand(1,25);                                       					//generating a new random number
 $var=0;
 if(isset($_POST['signal']))
 {
 	$var .= $var++;
 }
 if($var!==0){	
-	$rand = $randnew;	                                   //changing the original random number
+	$rand = $randnew;	                                   				//changing the original random number
 }
 
-echo"<body style=background-image:url(img/$rand.jpg);></body>"; //the random number directly corresponds to 1 of 25 images
+echo"<body style=background-image:url(img/$rand.jpg);></body>"; 				//the random number directly corresponds to 1 of 25 images
 
 ?>
 
-<?php                                                                  //part 3: to get real time notification
-$res = mysqli_query($conn,"SELECT count(1) FROM chathistory");         //to identify change in sql table
+<?php                                                                  				//part 3: to get real time notification
+$res = mysqli_query($conn,"SELECT count(1) FROM chathistory");         				//to identify change in sql table
 $row = mysqli_fetch_array($res);
-$total = $row[0];                                                       //getting the count in total variable
+$total = $row[0];                                                       			//getting the count in total variable
 
-if(!isset($_SESSION['count'])) {                                        //a session variable to keep check on count
-        $check = $_SESSION['count'] = $total;                           //storing it in check variable
+if(!isset($_SESSION['count'])) {                                        			//a session variable to keep check on count
+        $check = $_SESSION['count'] = $total;                           			//storing it in check variable
     } else {
         $check = $_SESSION['count'];
     }
 
 // echo $total;
-     if($total > $check ) {                                             //comparing total and check
+     if($total > $check ) {                                             			//comparing total and check
         $check = $_SESSION['count'] = $total;
-        $recent = mysqli_query($conn,"SELECT * FROM chathistory ORDER BY ID DESC LIMIT 1"); //getting the last user details
+        $recent = mysqli_query($conn,"SELECT * FROM chathistory ORDER BY ID DESC LIMIT 1"); 	//getting the last user details
         $check=mysqli_fetch_array($recent);
        // echo $check["name"];
-        if($_SESSION['name']==$check["name"]){                                 //if the message is from user ignore
+        if($_SESSION['name']==$check["name"]){                                 			//if the message is from user ignore
             //echo"<alert>message sent!</alert>";
         }
-        else { echo                                                            //if not trigger notification along with name
+        else { echo                                                            			//if not trigger notification along with name
         "<alert onclick=scrollWin()>new message from $check[name] &#8595;</alert><br>";
         }
      } 
