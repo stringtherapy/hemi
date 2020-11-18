@@ -5,4 +5,4 @@ Optimised for Mobile.
 
 Highly customisable, PHP powered, Built from scratch. 
 
-Source code easily understandable for beginners. 
+Source code beginner friendly. 
