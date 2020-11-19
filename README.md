@@ -18,5 +18,6 @@ Inbuilt profanity detection.
  <br>
   <br>
  Hosting service : InfinityFree <br>
- Image sources    : Unsplash, Pexels </i>
+ SSL Provider    : Cloudflare   
+ Image sources   : Unsplash, Pexels </i>
 </h6>
