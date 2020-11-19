@@ -27,12 +27,14 @@ $userID = mysqli_fetch_assoc($resultA);
 $passID = mysqli_fetch_assoc($resultB);
 
 
-if ($userID==$passID)
-{ header("Location: ChatArea.php");                                                               //Authentication 
-session_start();
-$_SESSION['username']="$username";}
-else echo "login fail"; }
+if ($userID==$passID){ 
+  header("Location: ChatArea.php");                                                               //Authentication 
+  session_start();
+  $_SESSION['username']="$username";
+} else {
+  echo "login fail"; 
+}
 ?>
-
+  
 </body>
 </html>
