@@ -18,5 +18,5 @@ Please ensure minimalism and ease of use.</i>
  <br>
   <br>
  Hosting service : InfinityFree <br>
- Image sources   : Unsplash, Pexels </p>
+ Image sources    : Unsplash, Pexels </p>
 </h6>
