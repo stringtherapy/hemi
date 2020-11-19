@@ -198,7 +198,7 @@ if(!isset($_SESSION['count'])) {                                        			//a s
         if($_SESSION['name']==$check["name"]){                                 			//if the message is from user ignore
             //echo"<alert>message sent!</alert>";
         }
-        else { echo                                                            			//if not trigger notification along with name
+        else { echo                                                            			//if not, trigger notification along with name
         "<alert onclick=scrollWin()>new message from $check[name] &#8595;</alert><br>";
         }
      } 
