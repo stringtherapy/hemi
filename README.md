@@ -11,11 +11,11 @@ Real-time notification.
 
 Inbuilt profanity detection.
 
-<h4>
+<h6>
 <i>This project is open to contributions.<br>
   Javascript optimizations much appreciated.<br>
 Please ensure minimalism and ease of use.</i>
   
  (Hosting service : InfinityFree) <br>
  (Image sources   : Unsplash, Pexels)</p>
-</h4>
+</h6>
