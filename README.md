@@ -12,8 +12,8 @@ Real-time notification.
 Inbuilt profanity detection.
 
 <i>This project is open to contributions.<br>
-  Please ensure minimalism and ease of use.<br>
-  Javascript optimizations much appreciated.<br></i>
+  Javascript optimizations much appreciated.<br>
+Please ensure minimalism and ease of use.<br></i>
   
  (Hosting service : InfinityFree) <br>
  (Image sources   : Unsplash, Pexels)</p>
