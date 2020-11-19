@@ -10,3 +10,5 @@ Source code beginner friendly.
 Real-time notification.
 
 Inbuilt profanity detection.
+
+//This project is open to contributions. javascript optimizations much appreciated//  
