@@ -23,5 +23,5 @@ Inbuilt profanity detection.
  Image sources   : Unsplash, Pexels </i>
 </h6>
 
-<h2>v1.0.0 18.11.2020</h2>
+<h2>v1.0.0</h2> <h3>18.11.2020</h3>
 basic public server
