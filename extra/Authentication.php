@@ -4,21 +4,20 @@
 </head>
 <body>
 <?php
-//Connecting
-$conn=mysqli_connect("localhost","root","","lib");
+$conn=mysqli_connect("host","root","","db");                                                    //connecting
 if(!$conn)
 die("no connection".mysqli_error($conn));
 else echo "Connection Successful<br>";
 
-//Input
+                                                                                               //getting data from any form
 $username =$_POST['username'];
 $password =$_POST['password'];
-$hashed_password=sha1($password);
+$hashed_password=sha1($password);                                                              //basic encryption for password
 
 
 //Authentication
-$queryA="SELECT ID FROM adminlogin WHERE username = '{$username}'";
-$queryB="SELECT ID FROM adminlogin WHERE hashed_password = '{$hashed_password}' LIMIT 1";
+$queryA="SELECT ID FROM login WHERE username = '{$username}'";                                  //ID is unique for each user 
+$queryB="SELECT ID FROM login WHERE hashed_password = '{$hashed_password}' LIMIT 1";            //comparing IDs of name and password never fail  
 
 
 $resultA=mysqli_query($conn,$queryA);
@@ -27,13 +26,12 @@ $resultB=mysqli_query($conn,$queryB);
 $userID = mysqli_fetch_assoc($resultA);
 $passID = mysqli_fetch_assoc($resultB);
 
-echo "$userID"."$passID";
 
 if ($userID==$passID)
-{ header("Location: StaffArea.php");
+{ header("Location: ChatArea.php");                                                               //Authentication 
 session_start();
 $_SESSION['username']="$username";}
-else {header("Location: AdminLoginfail.php"); }
+else echo "login fail"; }
 ?>
 
 </body>
