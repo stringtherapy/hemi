@@ -54,8 +54,7 @@ if($_SERVER['REQUEST_METHOD']=="POST")                              //on submiss
     if($var!== 0){
         echo "please try again";
     }
-    //End of profanity check.
-    //For more details and improvised version check my repo:bleepblop
+    //End of profanity check. For more details and improvised version check my repo:bleepblop
         
     else{
 	session_start();                                                    //starting session to store user input as cookie
