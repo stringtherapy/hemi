@@ -16,7 +16,7 @@ $hashed_password=sha1($password);                                               
 
 
 //Authentication
-$queryA="SELECT ID FROM login WHERE username = '{$username}'";                                  //ID is unique for each user 
+$queryA="SELECT ID FROM login WHERE username = '{$username}'";                                  //SQL ID is unique for each user 
 $queryB="SELECT ID FROM login WHERE hashed_password = '{$hashed_password}' LIMIT 1";            //comparing IDs of name and password never fail  
 
 
