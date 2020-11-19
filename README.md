@@ -11,4 +11,4 @@ Real-time notification.
 
 Inbuilt profanity detection.
 
-//This project is open to contributions. javascript optimizations much appreciated//  
+<i>This project is open to contributions. Javascript optimizations much appreciated</i>  
