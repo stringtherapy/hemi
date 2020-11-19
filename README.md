@@ -14,9 +14,9 @@ Inbuilt profanity detection.
 <h6>
 <i>This project is open to contributions.<br>
   Javascript optimizations much appreciated.<br>
-Please ensure minimalism and ease of use.</i>
+Please ensure minimalism and ease of use.
  <br>
   <br>
  Hosting service : InfinityFree <br>
- Image sources    : Unsplash, Pexels </p>
+ Image sources    : Unsplash, Pexels </i>
 </h6>
