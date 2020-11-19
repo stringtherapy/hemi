@@ -18,6 +18,7 @@ Inbuilt profanity detection.
  <br>
   <br>
  Hosting service : InfinityFree <br>
- SSL Provider    : Cloudflare   
+ SSL Provider    : Cloudflare <br>
+  
  Image sources   : Unsplash, Pexels </i>
 </h6>
