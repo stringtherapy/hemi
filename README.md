@@ -1,7 +1,7 @@
 # hemi[https://hemi.ga]
 <h2>Open Source Web Messenger</h2> 
 
-Minimalistic Design. Optimised for Mobile.
+Optimised for Mobile.
 
 Highly customisable, PHP powered, Built from scratch. 
 
@@ -12,7 +12,8 @@ Real-time notification.
 Inbuilt profanity detection.
 
 <i>This project is open to contributions.<br> 
-  Javascript optimizations much appreciated.</i>
+  Javascript optimizations much appreciated.<br>
+Please ensure minimalism and ease of use</i>
   
  (Hosting service : InfinityFree) <br>
  (Image sources   : Unsplash, Pexels)</p>
