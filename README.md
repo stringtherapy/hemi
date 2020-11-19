@@ -14,5 +14,5 @@ Inbuilt profanity detection.
 <i>This project is open to contributions.<br> 
   Javascript optimizations much appreciated.</i>
   
- Hosting service: <i>InfinityFree</i><br>
- Image Sources: <i>Unsplash, Pexels</i>
+ Hosting service : InfinityFree
+ Image Sources.  : Unsplash, Pexels
