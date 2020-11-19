@@ -15,4 +15,4 @@ Inbuilt profanity detection.
   Javascript optimizations much appreciated.</i>
   
  (Hosting service : InfinityFree) <br>
- (Image Sources.  : Unsplash, Pexels)</p>
+ (Image sources   : Unsplash, Pexels)</p>
