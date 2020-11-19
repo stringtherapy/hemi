@@ -14,7 +14,7 @@ Inbuilt profanity detection.
 <h6>
 <i>This project is open to contributions.<br>
   Javascript optimizations welcome.<br>
-  Kindly ensure minimalism and ease of use.
+  Appreciate minimalism and ease of use.
  <br>
   <br>
  Hosting service : InfinityFree <br>
