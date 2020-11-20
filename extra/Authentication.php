@@ -12,7 +12,7 @@ else echo "Connection Successful<br>";
                                                                                                //getting data from any form
 $username =$_POST['username'];
 $password =$_POST['password'];
-$hashed_password=sha1($password);                                                              //basic encryption for password
+$hashed_password= password_hash($password, PASSWORD_DEFAULT);                                   //basic encryption for password
 
 
 //Authentication
