@@ -27,6 +27,10 @@ include('extra/logincheck.php');
 <?php
 include('user/conn.php');         
 
+$stmt = mysqli_stmt_init($conn);
+$sql="INSERT INTO chathistory (name,message,time) VALUES (?, ?, ?)";
+	
+	
 if($_SERVER['REQUEST_METHOD']=="POST"){
 	if(isset($_POST['message']) AND !empty($_POST['message'])){           
 
@@ -35,8 +39,11 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
 	$time=date("l h:i:sa");
 
     	include('extra/filter.php');  //gets $message outputs $censored 
-	
-	mysqli_query($conn,"INSERT into chathistory(name,message,time) VALUES('$name','$censored','$time')");
+		
+		if(mysqli_stmt_prepare($stmt,$sql)){
+		   mysqli_stmt_bind_param($stmt, "sss", $name, $censored, $time);
+		   mysqli_stmt_execute($stmt);
+		}
 	}
 }
 ?>
