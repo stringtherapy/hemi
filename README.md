@@ -24,12 +24,12 @@ Inbuilt profanity detection.
 </h6>
 
 demo:[https://hemi.ga]
-</br>
-<h3>Alpha v1.0.0</h3>
+</br>Alpha
+<h3>v1.0.0</h3>
 basic public server
 18.11.2020<br>
 
 <h3>v1.0.1</h3>
-Improved security<br> 
-Organized source code
+improved security<br> 
+organized source code
 20.11.2020
