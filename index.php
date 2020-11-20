@@ -16,7 +16,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 {
     if(isset($_POST['name']) AND !empty($_POST['name'])){
 	$html = htmlspecialchars($_POST['name']);    
-	$name = mysqli_real_escape_string($html);
+	$name = mysqli_real_escape_string($conn,$html);
 	    
 	//creating template before sending
 	$stmt = mysqli_stmt_init($conn);
