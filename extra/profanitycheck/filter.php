@@ -1,12 +1,12 @@
 <?php 
+	//$message is the input from any other phps
 
-	$list1 = file_get_contents("profan.txt");         
-	$list2 = file_get_contents("three.txt");	 
-    $exem2 = explode("\n",$newlist);		  
-    
-//$message is the input from any other phps
+	$list = file_get_contents("list/profan.txt");         
+	$list2 = file_get_contents("list/three.txt");	 
+    	$exem2 = explode("\n",$list2);		  
+	
 	$me=explode(" ",$message);				  
-    $length = count($me);				
+    	$length = count($me);				
 	$censored='';					 
 	$check=0;
 	for ($i = 0; $i < $length; $i++)					 	     
@@ -26,8 +26,7 @@
 	    		  $censored .= "$me[$i]"." ";
 	    		  $check .= $check++;                                                      
 	    }
-	    
-	    //echo "<div id=output>$censored</div>";                                          
-	}	
+	}
+	//failure cases
     	$exem = array("whole", "will", "other","mother","long","fell","best","face","star","ones","horn","chin","lock","full","test","phone","head"); 
 ?>
