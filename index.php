@@ -30,7 +30,7 @@ $conn=mysqli_connect("host","user","pass","db");                    //establishi
 if($_SERVER['REQUEST_METHOD']=="POST")                              //on submission
 {
     if(isset($_POST['name']) AND !empty($_POST['name'])){           //if name is not empty
-	$name=$_POST['name'];                                           //storing the user name in variable
+	$name=mysqli_real_escape_string($conn,$_POST['name']);       //storing the user name in variable
     
     
     //checking for profanity (basic version)
