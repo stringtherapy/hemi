@@ -11,7 +11,6 @@ $rand = $_SESSION['rand'];
 
 <table>
 <th></th>
-
 <?php 
 include('user/conn.php');
 
