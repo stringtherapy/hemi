@@ -24,7 +24,8 @@ Inbuilt profanity detection.
 </h6>
 
 demo:[https://hemi.ga]
-</br>Alpha<h3>v1.0.0</h3>
+</br>
+<h3>v1.0.0</h3> Alpha
 basic public server
 18.11.2020<br>
 
