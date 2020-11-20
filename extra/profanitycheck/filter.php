@@ -23,7 +23,6 @@
 	    			}
 	    } else if(in_array($me2[$i], $exem2)){                                           
 	    		  $me[$i]="<strike><d style = opacity:20%>".$me[$i]."</d></strike>";             
-	    		  $censored .= "$me[$i]"." ";
 	    		  $check .= $check++;                                                      
 	    } 
 	$censored .= "$me[$i]"." ";  
