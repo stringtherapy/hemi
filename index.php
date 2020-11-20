@@ -16,13 +16,24 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 {
     if(isset($_POST['name']) AND !empty($_POST['name'])){
 	$name = mysqli_real_escape_string($conn,$_POST['name']);
+	    
+	//preparing statement
+	$stmt = mysqli_stmt_init($conn);
+	$sql="INSERT INTO friends (name) VALUES (?)";
+	    
+	//checking data for profanity before sending    
 	$message = $name;
-	include('extra/profanitycheck/filter.php'); 
+	include('extra/profanitycheck/filter.php');     
 	if ($check == 0){
 		session_start();
 		$_SESSION['name']=$name;
     		$_SESSION['rand']=rand(1,25);
-  		mysqli_query($conn,"INSERT INTO friends(name)VALUES('$name')");
+		
+		mysqli_stmt_prepare($stmt,$sql);
+		mysqli_stmt_bind_param($stmt, "s", $name);
+		mysqli_stmt_execute($stmt);
+		
+  		//mysqli_query($conn,"INSERT INTO friends(name)VALUES('$name')");
 		header('Location:text.php');
 	} else echo 'please try again';
     } else echo 'please enter a name'; 
