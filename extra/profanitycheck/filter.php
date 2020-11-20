@@ -1,5 +1,5 @@
 <?php 
-	//$message is the input from any other phps
+	//$message is the input from other phps
 
 	$list = file_get_contents("list/profan.txt");         
 	$list2 = file_get_contents("list/three.txt");	 
