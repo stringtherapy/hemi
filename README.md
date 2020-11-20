@@ -1,6 +1,6 @@
-# hemi demo:[https://hemi.ga]
+# hemi 
 
-<h2>Open Source Web Messenger</h2> 
+<h2>Open Source Web Messenger</h2> demo:[https://hemi.ga]
 
 Optimised for Mobile.
 
