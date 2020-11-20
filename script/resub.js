@@ -1,4 +1,4 @@
 if (window.history.replaceState ) {                                  	  
 	window.history.replaceState(null, null, window.location.href );
 }
-//source:www.webtrickshome.com
+//prevents form resubmission. source:www.webtrickshome.com
