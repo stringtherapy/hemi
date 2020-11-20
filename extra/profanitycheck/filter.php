@@ -13,7 +13,7 @@
 	{
 	$me2[$i] = preg_replace('/[^A-Za-z0-9\-]/', '', $me[$i]);	 	            
 	    if(strlen($me2[$i]) >= 4){	                                                     			
-	    	$me3[$i] = "/$me2[$i]/";                                                       
+	    	$me3[$i] = "/$me2[$i]/i";                                                       
 	    		if(preg_match($me3[$i], $list)==1){                              	    
             			if(!in_array($me2[$i], $exem)){				 	     						
 	    					$me[$i]="<strike><d style = opacity:20%>".$me[$i]."</d></strike>";
