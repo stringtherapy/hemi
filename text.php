@@ -12,7 +12,7 @@ include('extra/logincheck.php');
 </head>
 
 <body onload="scrollWin()">
-<script type="text/javascript" src="jquery-3.3.1.min.js"></script>	
+<script type="text/javascript" src="script/jquery-3.3.1.min.js"></script>	
 <script src="/user/refresh.js"></script>                                           
   
 <div id="Status" onload="scrollWin()"><br><br>
