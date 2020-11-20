@@ -1,6 +1,6 @@
 # hemi 
 
-<h2>Open Source Web Messenger</h2> demo:[https://hemi.ga]
+<h2>Open Source Web Messenger</h2> 
 
 Optimised for Mobile.
 
@@ -22,7 +22,9 @@ Inbuilt profanity detection.
   
  Image sources   : Unsplash, Pexels </i>
 </h6>
-
+<br>
+demo:[https://hemi.ga]
+</br>
 <h3>v1.0.0</h3>
 basic public server
 18.11.2020
