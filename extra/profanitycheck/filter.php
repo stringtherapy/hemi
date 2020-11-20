@@ -25,7 +25,8 @@
 	    		  $me[$i]="<strike><d style = opacity:20%>".$me[$i]."</d></strike>";             
 	    		  $censored .= "$me[$i]"." ";
 	    		  $check .= $check++;                                                      
-	    }
+	    } 
+	$censored .= "$me[$i]"." ";  
 	}
 	//failure cases
     	$exem = array("whole", "will", "other","mother","long","fell","best","face","star","ones","horn","chin","lock","full","test","phone","head"); 
