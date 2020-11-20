@@ -103,7 +103,7 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
 	if(isset($_POST['message']) AND !empty($_POST['message'])){           	//on receiving data from user
 
     $name=$_SESSION['name'];
-	$message=$_POST['message'];                                           	//storing name, message, date
+	$message=mysqli_real_escape_string($conn,$_POST['message']);            //storing name, message, date
 	$time=date("l h:i:sa");
 
     $list=file_get_contents("profan.txt");                               	//basic profanity check
