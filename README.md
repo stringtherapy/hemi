@@ -22,7 +22,7 @@ Inbuilt profanity detection.
   
  Image sources   : Unsplash, Pexels </i>
 </h6>
-<br>
+
 demo:[https://hemi.ga]
 </br>
 <h3>v1.0.0</h3>
