@@ -8,7 +8,7 @@ $rand = $_SESSION['rand'];
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href ="css/window.css">
 </head>
-
+													<!-- code that displays mysql table -->
 <table>
 <th></th>
 <?php 
@@ -34,11 +34,12 @@ if (mysqli_num_rows($list)>0) {
           <span style=float:left;font-size:12px;color:#F5F5F5>$result[time]</span></p>   
           </td>
           </tr>";
-        }
-    }
+	}
+}
 ?>
 </table>
-
+	
+													<!-- code that changes background -->		
 <form action="" method="post">
 <input type="submit" name="signal" value="refresh" id="w">
 </form>
@@ -56,28 +57,24 @@ if($var!==0){
 echo"<body style=background-image:url(img/$rand.jpg);></body>";
 ?> 
                                            
-<?php                                                                 
+<?php                                                                 					 //code to detect mysql changes 
 $res = mysqli_query($conn,"SELECT count(1) FROM chathistory");         
 $row = mysqli_fetch_array($res);
 $total = $row[0];                                                       
 
 if(!isset($_SESSION['count'])) {                                        
         $check = $_SESSION['count'] = $total;
-    } else {
+} else {
         $check = $_SESSION['count'];
-    }
+}
 
-     if($total > $check ) {                                                              
-        $check = $_SESSION['count'] = $total;
+     if($total > $check ) {                                                              		//generating notification 
+        $check = $_SESSION['count'] = $total;								//potential area to refresh single thread rather than whole table 
         $recent = mysqli_query($conn,"SELECT * FROM chathistory ORDER BY ID DESC LIMIT 1"); 
         $check=mysqli_fetch_array($recent);
-        if($_SESSION['name']==$check["name"]){                                             
-            //echo"<alert>message sent!</alert>";
-        }
-        else { echo                                                                
-        "<alert>new message from <i>$check[name]</i> &#8595;</alert><br>";
-        }
-     }
+        	if($_SESSION['name']==$check["name"]){                                             
+            	//echo"<alert>message sent!</alert>";
+        	} else echo "<alert>new message from <i>$check[name]</i> &#8595;</alert><br>";
+}
 ?>
-  
 </html>
