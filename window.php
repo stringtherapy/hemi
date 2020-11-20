@@ -1,43 +1,41 @@
 <?php
-include '/extra/logincheck.php';
+include('extra/logincheck.php');
 $rand = $_SESSION['rand']; 
 ?>
 <html>
 <head>
 <title>chat table</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href ="/css/window.css">
+<link rel="stylesheet" href ="css/window.css">
 </head>
 
 <table>
 <th></th>
 
 <?php 
-include '/user/conn.php';
+include('user/conn.php');
 
 $list=mysqli_query($conn,"SELECT * FROM chathistory ORDER BY ID ASC");
 if (mysqli_num_rows($list)>0) {
     while($result=mysqli_fetch_array($list)){
         if($_SESSION['name']==$result['name']){                 
           echo "<tr>
-		            <td>
+	  <td>
           <p style=color:white; font-family:Georgia id=user>
           <span style=float:left;font-size:14px;color:#F5F5F5>$result[name]</span><br> 
           <span style=float:left;font-size:20px;opacity:1;>$result[message]</span><br>
-          <span style=float:right;font-size:12px;color:#F5F5F5>$result[time]</span>
-          </p>   
+          <span style=float:right;font-size:12px;color:#F5F5F5>$result[time]</span></p>   
           </td>
-		      </tr>";
+          </tr>";
         } else echo "<tr>
-		                 <td>
+          <td>
           <p style=color:white; font-family:Georgia id=others>
           <span style=float:right;font-size:14px;color:#F5F5F5>$result[name]</span><br> 
           <span style=float:right;font-size:20px;opacity:1;>$result[message]</span><br>
-          <span style=float:left;font-size:12px;color:#F5F5F5>$result[time]</span>
-          </p>   
+          <span style=float:left;font-size:12px;color:#F5F5F5>$result[time]</span></p>   
           </td>
-		      </tr>";
-      }
+          </tr>";
+        }
     }
 ?>
 </table>
@@ -46,7 +44,18 @@ if (mysqli_num_rows($list)>0) {
 <input type="submit" name="signal" value="refresh" id="w">
 </form>
 
-<?php include 'extra/background.php'; ?> 
+<?php
+$randnew= rand(1,25);        
+$var=0;
+if(isset($_POST['signal']))
+{
+  $var .= $var++;
+}
+if($var!==0){ 
+  $rand = $randnew;                
+}
+echo"<body style=background-image:url(img/$rand.jpg);></body>";
+?> 
                                            
 <?php                                                                 
 $res = mysqli_query($conn,"SELECT count(1) FROM chathistory");         
@@ -67,7 +76,7 @@ if(!isset($_SESSION['count'])) {
             //echo"<alert>message sent!</alert>";
         }
         else { echo                                                                
-        "<alert>new message from $check[name] &#8595;</alert><br>";
+        "<alert>new message from <i>$check[name]</i> &#8595;</alert><br>";
         }
      }
 ?>
