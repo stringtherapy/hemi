@@ -24,7 +24,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 	//checking profanity before sending    
 	$message = $name;
 	include('extra/profanitycheck/filter.php');     
-	if ($check !== 1){
+	if ($check==0){
 		session_start();
 		$_SESSION['name']=$name;
     		$_SESSION['rand']=rand(1,25);
