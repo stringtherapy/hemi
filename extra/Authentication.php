@@ -28,7 +28,7 @@ $passID = mysqli_fetch_assoc($resultB);
 
 
 if ($userID==$passID){ 
-  header("Location: ChatArea.php");                                                               //Authentication 
+  header("Location: ChatArea.php");                                                               //authentication 
   session_start();
   $_SESSION['username']="$username";
 } else {
