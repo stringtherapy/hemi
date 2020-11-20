@@ -30,7 +30,6 @@ include('user/conn.php');
 $stmt = mysqli_stmt_init($conn);
 $sql="INSERT INTO chathistory (name,message,time) VALUES (?, ?, ?)";
 	
-	
 if($_SERVER['REQUEST_METHOD']=="POST"){
 	if(isset($_POST['message']) AND !empty($_POST['message'])){           
 
