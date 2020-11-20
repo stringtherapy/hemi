@@ -1,6 +1,6 @@
 # hemi 
 
-<h2>hemi - Open Source Web Messenger</h2> 
+<h2>Open Source Web Messenger</h2> 
 
 Optimised for Mobile.
 
