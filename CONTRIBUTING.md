@@ -14,7 +14,7 @@ Thanks for checking out. The vision of this project is to build a transparent an
 * Kindly ensure minimalism since this is a base version 
 * Make the part of your code easily understandable by others
 * Remove any redundancy in code
-* Help to recifty any bad coding practice you come across
+* Help to rectify any bad coding practice you come across
 
 <h2> Core files </h2>
 
