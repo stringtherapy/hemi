@@ -18,8 +18,8 @@ Thanks for checking out. The vision of this project is to build a transparent an
 
 <h2> Core files </h2>
 
-**index.php**  - Code for User login
-**text.php**   - Code for receiving text from User 
-**window.php** - Code for displaying the table of chat history
+**index.php**  - Code for User login <br> 
+**text.php**   - Code for receiving text from User <br>
+**window.php** - Code for displaying the table of chat history <br>
 
 Note: window.php is embedded to text.php
