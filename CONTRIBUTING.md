@@ -31,11 +31,11 @@ Note: window.php is embedded onto text.php
 <h2> Database Specifications </h2>
 
 **Table 1** <br>
-* ID (Auto Increment)
+* ID 
 * name 
 
 **Table 2** <br>
-* ID (Auto Increment)
+* ID 
 * name 
 * message
 * time
