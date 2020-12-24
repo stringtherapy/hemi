@@ -30,11 +30,11 @@ Note: window.php is embedded onto text.php
 
 <h2> Database Specifications </h2>
 
-**Table 1** list of users <br>
+**Table 1:** user list <br>
 * ID 
 * name 
 
-**Table 2** chat history <br>
+**Table 2:** chat history <br>
 * ID 
 * name 
 * message
