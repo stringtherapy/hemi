@@ -24,11 +24,11 @@ Inbuilt profanity detection.
 <br>
 
 **Releases:** <br>
-**v1.0.0 - Alpha** 
+**v1.0.0 - Alpha** <br>
 basic public server
 18.11.2020
 
-**v1.0.1**
+**v1.0.1** <br>
 improved security
 organized source code
 20.11.2020
