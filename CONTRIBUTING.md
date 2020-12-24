@@ -18,7 +18,7 @@ Refer [user/refresh.js] , the entire thread [window.php] is refreshed to display
 * Remove any redundancy in code
 * Help to rectify any bad coding practice you come across <br>
 
-*Happy Coding!* &#128515;
+  *Happy Coding!*   
 
 <h2> Core files </h2>
 
