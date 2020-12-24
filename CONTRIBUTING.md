@@ -1,10 +1,10 @@
 <h1> How to contribute </h1>
 
-Thanks for checking out. The vision of this project is to build a transparent and flexible messenger that can be extended and personalised in many ways. You are welcome to participate in any roles you wish to grow a professional career with. This will be a valuable software development experience for all of us.
+Thanks for checking out. The vision of this project is to build a transparent and flexible messenger that can be customised by anyone to have a minimalistic and reliable chat experience. You are welcome to participate in any roles you wish to grow a professional career with. This will be a valuable software development experience for all of us.
 
 <h2> Required Fixes </h2>
 Mitigation to reduce server load: <br><br>
-Refer [user/refresh.js], the entire thread [window.php] is refreshed to display a single message. Any workarounds acheiving the same functionality but reducing the load on server is appreciated. 
+Refer [user/refresh.js](https://github.com/stringtherapy/hemi/blob/main/user/refresh.js), the entire thread [window.php] is refreshed to display a single message. Any workarounds acheiving the same functionality but reducing the load on server is appreciated. 
 
 <h2> Required Improvements </h2>
 
