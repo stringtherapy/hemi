@@ -31,5 +31,4 @@ Note: window.php is embedded onto text.php
 <h2> Database Specifications </h2>
 
 **Table 1:** List of users (ID, name) <br>
-
 **Table 2:** Chat history  (ID, name, message, time) <br>
