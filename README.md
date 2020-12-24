@@ -6,7 +6,7 @@
 
 * Optimised for Mobile.
 
-* Highly customisable, Built from scratch using PHP. 
+* Highly customisable, PHP powered, Built from scratch. 
 
 * Source code beginner friendly. 
 
