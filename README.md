@@ -34,12 +34,12 @@
 **Releases:** <br>
 
 **v1.0.0 - Alpha** <br>
-basic public server
+basic public server <br>
 18.11.2020
 
 **v1.0.1** <br>
-improved security
-organized source code
+improved security <br> 
+organized source code <br>
 20.11.2020
 
 ---
