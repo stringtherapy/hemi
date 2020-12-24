@@ -26,7 +26,7 @@
 
 **Contributing:** <br>
 
-*Contribution guidlines are given [here](https://github.com/stringtherapy/hemi/blob/main/CONTRIBUTING.md)* <br>
+*Contribution guidelines are given [here](https://github.com/stringtherapy/hemi/blob/main/CONTRIBUTING.md)* <br>
 
 ---
 
