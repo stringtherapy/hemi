@@ -11,7 +11,7 @@
 2. Extract and place the folder in `C:\wamp64\www`
 3. Launch **Wampserver** application
 4. Open your browser and type `localhost` in URL 
-5. Navigate to **phpmyadmin** in the bottom-left
+5. Navigate to **phpmyadmin** in the bottom-left corner
 6. Login with username: *root*, no password and MySQL as server
 7. On the left panel click **New** to create a database with the *name* of your choice  
 8. Navigate to **Import** on the top menu bar and **Choose File:** Browse `C:\wamp64\www\hemi-main\user\db.sql` and Click **Go** 
