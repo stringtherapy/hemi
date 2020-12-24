@@ -34,7 +34,7 @@ if($_SERVER['REQUEST_METHOD']=="POST"){								// if user clicks "send"
 	if(isset($_POST['message']) AND !empty($_POST['message'])){           			// if user's message is not empty
 
     	$name=$_SESSION['name'];								// getting name
-	$message=mysqli_real_escape_string($conn,$_POST['message']);                            // getting message              
+	$message=$_POST['message'];                            					// getting message              
 	$time=date("l h:i:sa");									// registering time
 
     	include('extra/filter.php');  								// gets $message outputs $censored 
