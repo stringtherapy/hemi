@@ -44,16 +44,16 @@
 **Releases:** <br>
 
 **v1.0.0 - Alpha**<br>
-18.11.2020
+(18.11.2020)
 * basic public server <br>
 
 **v1.0.1**<br>
-20.11.2020
+(20.11.2020)
 * improved security <br> 
 * organized source code <br>
 
 **v1.0.2** <br>
-25.12.2020
+(25.12.2020)
 * minor bug fixes <br> 
 * included documentation <br>
 ---
