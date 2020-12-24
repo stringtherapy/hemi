@@ -16,7 +16,7 @@ Inbuilt profanity detection.
 *Contribution guidlines are given [here](https://github.com/stringtherapy/hemi/blob/main/CONTRIBUTING.md)* <br>
 
 **Demo** <br>
- Link: [https://hemi.ga]
+ Link: [https://hemi.ga] <br>
  Hosting service : *InfinityFree* <br>
  SSL Provider    : *Cloudflare* <br>
  Image sources   : *Unsplash, Pexels* 
