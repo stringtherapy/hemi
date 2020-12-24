@@ -6,7 +6,7 @@ Thanks for checking out. The vision of this project is to build a transparent an
 Mitigation to reduce server load: <br><br>
 Refer [user/refresh.js], the entire thread [window.php] is refreshed to display a single message. Any workarounds acheiving the same functionality but reducing the load on server is appreciated. 
 
-<h2> Potential areas for Improvements </h2>
+<h2> Improvements </h2>
 
 * Javascript & MySQL Optimizations 
 * CSS Enhancements adaptable for both mobile and desktop environments 
