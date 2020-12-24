@@ -27,3 +27,15 @@ Refer [user/refresh.js] , the entire thread [window.php] is refreshed to display
 **window.php** - Code for displaying the table of chat history <br>
 
 Note: window.php is embedded onto text.php
+
+<h2> Database Specifications </h2>
+
+**Table 1** <br>
+* ID (Auto Increment)
+* name 
+
+**Table 2** <br>
+* ID (Auto Increment)
+* name 
+* message
+* time
