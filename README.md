@@ -2,6 +2,8 @@
 
 <h2>Open Source Web Messenger</h2> 
 
+**Features:** <br>
+
 Optimised for Mobile.
 
 Highly customisable, PHP powered, Built from scratch. 
@@ -24,6 +26,7 @@ Inbuilt profanity detection.
 <br>
 
 **Releases:** <br>
+
 **v1.0.0 - Alpha** <br>
 basic public server
 18.11.2020
