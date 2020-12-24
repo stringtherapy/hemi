@@ -12,7 +12,7 @@ Real-time notification.
 
 Inbuilt profanity detection.
 
-# Contributing
+<h2>Contributing</h2>
 *Contribution guidlines are given [here](https://github.com/stringtherapy/hemi/blob/main/CONTRIBUTING.md)* <br>
 
 # Demo
