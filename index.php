@@ -20,7 +20,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")			// if user logs in
 	    
 	//creating template before sending
 	$stmt = mysqli_stmt_init($conn);			
-	$sql="INSERT INTO friends (name) VALUES (?)";		// using placeholders(?) instead of direct insertion into database if a good security practice
+	$sql="INSERT INTO friends (name) VALUES (?)";		// using placeholders(?) instead of direct insertion into database is a good security practice
 	    
 	//checking profanity before sending    			
 	$message = $name;					// profanity filter only accepts the variable name "message"
