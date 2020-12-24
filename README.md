@@ -15,6 +15,7 @@ Inbuilt profanity detection.
 # Contributing
 *Contribution guidlines are given [here](https://github.com/stringtherapy/hemi/blob/main/CONTRIBUTING.md)* <br>
 
+# Demo
 <h6>
 <i>
  Hosting service : InfinityFree <br>
@@ -22,8 +23,10 @@ Inbuilt profanity detection.
  Image sources   : Unsplash, Pexels </i>
 </h6>
 
-demo:[https://hemi.ga]
+link:[https://hemi.ga]
 </br>
+
+# Releases 
 <h3>v1.0.0 - Alpha</h3> 
 basic public server
 18.11.2020<br>
