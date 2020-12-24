@@ -2,7 +2,7 @@
 
 **Pre-requisites**
 
-* WAMP Server Installed (Download link: https://sourceforge.net/projects/wampserver/)
+* WAMP Server (Download link: https://sourceforge.net/projects/wampserver/)
 * Any text editor (Default Notepad or *Notepad++*, *Sublime*, etc.)
 
 **Setting up**
