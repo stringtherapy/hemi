@@ -14,6 +14,14 @@
 
 * Inbuilt profanity detection.
 
+**User Guide:** <br>
+
+* Download the code
+
+* Configure your server ```user/conn.php```
+
+* Import database into your server ```user/db.sql```
+
 ---
 
 **Contributing:** <br>
