@@ -16,8 +16,8 @@ include('user/conn.php');
 
 $list=mysqli_query($conn,"SELECT * FROM chathistory ORDER BY ID ASC");
 if (mysqli_num_rows($list)>0) {
-    $result['message'] = htmlspecialchars($result['message']);	
     while($result=mysqli_fetch_array($list)){
+	$result['message'] = htmlspecialchars($result['message']);	
         if($_SESSION['name']==$result['name']){                 
           echo "<tr>
 	  <td>
