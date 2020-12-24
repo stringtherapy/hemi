@@ -52,4 +52,10 @@ improved security <br>
 organized source code <br>
 20.11.2020
 
+**v1.0.2** <br>
+minor bug fixes <br> 
+included documentation <br>
+25.12.2020
+
+
 ---
