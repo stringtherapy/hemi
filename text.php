@@ -28,19 +28,19 @@ include('extra/logincheck.php');
 include('user/conn.php');         
 
 $stmt = mysqli_stmt_init($conn);
-$sql="INSERT INTO chathistory (name,message,time) VALUES (?, ?, ?)";
+$sql="INSERT INTO chathistory (name,message,time) VALUES (?, ?, ?)";          			// about to insert three values from user
 	
-if($_SERVER['REQUEST_METHOD']=="POST"){
-	if(isset($_POST['message']) AND !empty($_POST['message'])){           
+if($_SERVER['REQUEST_METHOD']=="POST"){								// if user clicks "send"
+	if(isset($_POST['message']) AND !empty($_POST['message'])){           			// if user's message is not empty
 
-    	$name=$_SESSION['name'];
-	$message=mysqli_real_escape_string($conn,$_POST['message']);                                          
-	$time=date("l h:i:sa");
+    	$name=$_SESSION['name'];								// getting name
+	$message=mysqli_real_escape_string($conn,$_POST['message']);                            // getting message              
+	$time=date("l h:i:sa");									// registering time
 
-    	include('extra/filter.php');  //gets $message outputs $censored 
+    	include('extra/filter.php');  								// gets $message outputs $censored 
 		
 		if(mysqli_stmt_prepare($stmt,$sql)){
-		   mysqli_stmt_bind_param($stmt, "sss", $name, $censored, $time);
+		   mysqli_stmt_bind_param($stmt, "sss", $name, $censored, $time);		// inserting name, cencored message and time into database
 		   mysqli_stmt_execute($stmt);
 		}
 	}
