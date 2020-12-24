@@ -35,7 +35,7 @@
 **Demo:**  [https://hemi.ga] <br>
  
  Hosting service : *InfinityFree* <br>
- SSL Provider    : *Cloudflare* <br>
+ SSL Provider    : *Cloudflare* (end-to-end encryption) <br>
  Image sources   : *Unsplash, Pexels* 
 <br>
 
