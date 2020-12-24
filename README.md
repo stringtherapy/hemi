@@ -1,4 +1,4 @@
-# hemi
+# hemi.ga
 
 <h2>Open Source Web Messenger</h2> 
 
