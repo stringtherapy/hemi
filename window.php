@@ -58,7 +58,7 @@ if($var!==0){
 echo"<body style=background-image:url(img/$rand.jpg);></body>";
 ?> 
                                            
-<?php                                                                 					 //code to detect mysql changes 
+<?php                                                                 					 // code to detect mysql changes 
 $res = mysqli_query($conn,"SELECT count(1) FROM chathistory");         
 $row = mysqli_fetch_array($res);
 $total = $row[0];                                                       
@@ -69,7 +69,7 @@ if(!isset($_SESSION['count'])) {
         $check = $_SESSION['count'];
 }
 
-     if($total > $check ) {                                                              		//detected a new entry in table 
+     if($total > $check ) {                                                              		// detected a new entry in table 
         $check = $_SESSION['count'] = $total;								
         $recent = mysqli_query($conn,"SELECT * FROM chathistory ORDER BY ID DESC LIMIT 1"); 
         $check=mysqli_fetch_array($recent);
