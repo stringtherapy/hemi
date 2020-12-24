@@ -4,7 +4,7 @@ Thanks for checking out. The vision of this project is to build a transparent an
 
 <h2> Help </h2>
 * Mitigation to reduce server load <br>
-Refer [user/refresh.js](user/refresh.js) , the entire thread **window.php** is refreshed to display a single message. Any workarounds acheiving the same functionality but reducing the load on server is appreciated. 
+Refer [user/refresh.js](https://github.com/stringtherapy/hemi/blob/main/user/refresh.js) , the entire thread **window.php** is refreshed to display a single message. Any workarounds acheiving the same functionality but reducing the load on server is appreciated. 
 
 <h2> Improvements required </h2>
 
