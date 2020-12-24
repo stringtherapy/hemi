@@ -12,7 +12,7 @@
 
 * Real-time notification.
 
-* Inbuilt profanity detection.
+* In-built profanity detection.
 
 **User Guide:** <br>
 
