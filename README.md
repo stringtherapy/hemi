@@ -12,8 +12,8 @@ Real-time notification.
 
 Inbuilt profanity detection.
 
-**Contributing**
-Contribution guidlines are given [here](https://github.com/stringtherapy/hemi/blob/main/CONTRIBUTING.md) <br>
+# Contributing
+*Contribution guidlines are given [here](https://github.com/stringtherapy/hemi/blob/main/CONTRIBUTING.md)* <br>
 
 <h6>
 <i>
