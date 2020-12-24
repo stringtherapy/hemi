@@ -15,16 +15,13 @@ Inbuilt profanity detection.
 **Contributing:** <br>
 *Contribution guidlines are given [here](https://github.com/stringtherapy/hemi/blob/main/CONTRIBUTING.md)* <br>
 
-**Demo** 
-<h6>
-<i>
- Hosting service : InfinityFree <br>
- SSL Provider    : Cloudflare <br>
- Image sources   : Unsplash, Pexels </i>
-</h6>
+**Demo** <br>
+ *Hosting service : InfinityFree <br>
+ *SSL Provider    : Cloudflare <br>
+ *Image sources   : Unsplash, Pexels 
 
 link:[https://hemi.ga]
-</br>
+<br>
 
 **Releases**
 <h3>v1.0.0 - Alpha</h3> 
