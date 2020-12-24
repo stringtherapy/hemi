@@ -20,7 +20,7 @@
 
 * Configure your server ```user/conn.php```
 
-* Import database into your server ```user/db.sql```
+* Import database ```user/db.sql``` into your server
 
 ---
 
