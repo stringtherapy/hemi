@@ -43,9 +43,8 @@
 
 **Releases:** <br>
 
-**v1.0.0 - Alpha** <br>
+**v1.0.0 - Alpha** 18.11.2020 <br>
 * basic public server <br>
-18.11.2020
 
 **v1.0.1** <br>
 * improved security <br> 
