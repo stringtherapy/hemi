@@ -8,5 +8,5 @@ if (!$conn)
 }
 
 // define any timezone you want. check php manual for the exact names allowed: https://www.php.net/manual/en/timezones.php
-date_default_timezone_set("Asia/Kolkata");
+date_default_timezone_set("UTC");
 ?>
