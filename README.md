@@ -22,7 +22,8 @@
 
 * Import database ```user/db.sql``` into your server
 
-*For in-depth guide follow [user_manual](https://github.com/stringtherapy/hemi/blob/main/user/user_manual.md)* (No programming experience required)
+*For in-depth guide follow [user_manual](https://github.com/stringtherapy/hemi/blob/main/user/user_manual.md)* <br>
+(No programming experience required)
 
 ---
 
