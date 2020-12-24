@@ -4,15 +4,15 @@
 
 **Features:** <br>
 
-Optimised for Mobile.
+* Optimised for Mobile.
 
-Highly customisable, PHP powered, Built from scratch. 
+* Highly customisable, PHP powered, Built from scratch. 
 
-Source code beginner friendly. 
+* Source code beginner friendly. 
 
-Real-time notification.
+* Real-time notification.
 
-Inbuilt profanity detection.
+* Inbuilt profanity detection.
 
 ---
 
