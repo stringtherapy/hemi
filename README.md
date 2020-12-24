@@ -22,12 +22,12 @@ Inbuilt profanity detection.
  Image sources   : *Unsplash, Pexels* 
 <br>
 
-**Releases**
-<h3>v1.0.0 - Alpha</h3> 
+**Releases:**
+**v1.0.0 - Alpha** 
 basic public server
 18.11.2020<br>
 
-<h3>v1.0.1</h3>
+**v1.0.1**
 improved security<br> 
 organized source code
 20.11.2020
