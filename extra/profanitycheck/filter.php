@@ -4,7 +4,7 @@
 
 	//$message is the input from other phps
 
-	$list = file_get_contents("extra/profanitycheck/list/profan.txt");         
+	$list =  file_get_contents("extra/profanitycheck/list/profan.txt");         
 	$list2 = file_get_contents("extra/profanitycheck/list/three.txt");	  
     	$exem2 = explode("\n",$list2);		  
 	
