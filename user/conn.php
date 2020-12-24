@@ -1,6 +1,6 @@
 <?php
 //enter the four strings to establish connection with your database
-$conn=mysqli_connect("hostname","username","password","databasename");
+$conn=mysqli_connect("hostname","username","password","databasename","portnumber_without_quotations");
 
 if (!$conn)
 {
