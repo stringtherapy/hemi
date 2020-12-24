@@ -16,7 +16,7 @@ include('extra/logincheck.php');
 <script src="user/refresh.js"></script>                                           
   
 <div id="Status" onload="scrollWin()"><br><br>
-<?php include('window.php'); ?><img src="extra/load.gif" width="25px" height="25px" style="margin-left:20%;">
+<?php include('window.php'); ?><img src="user/loading_animation.gif" width="25px" height="25px" style="margin-left:20%;">
 </div>
  
 <form action="text.php" method="post">          
