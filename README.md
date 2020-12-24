@@ -14,9 +14,13 @@ Real-time notification.
 
 Inbuilt profanity detection.
 
+---
+
 **Contributing:** <br>
 
 *Contribution guidlines are given [here](https://github.com/stringtherapy/hemi/blob/main/CONTRIBUTING.md)* <br>
+
+---
 
 **Demo:**  [https://hemi.ga] <br>
  
@@ -24,6 +28,8 @@ Inbuilt profanity detection.
  SSL Provider    : *Cloudflare* <br>
  Image sources   : *Unsplash, Pexels* 
 <br>
+
+---
 
 **Releases:** <br>
 
@@ -35,3 +41,5 @@ basic public server
 improved security
 organized source code
 20.11.2020
+
+---
