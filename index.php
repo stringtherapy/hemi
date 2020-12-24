@@ -16,11 +16,10 @@ if($_SERVER['REQUEST_METHOD'] == "POST")			// if user logs in
 {
     if(isset($_POST['name']) AND !empty($_POST['name'])){	// if the name entered by user is not empty 
 	$html = htmlspecialchars($_POST['name']);    		// [security purpose]: to prevent interpretation of html code
-	$name = mysqli_real_escape_string($conn,$html);		// [security purpose]: to prevent SQL injection  
 	    
 	//creating template before sending
 	$stmt = mysqli_stmt_init($conn);			
-	$sql="INSERT INTO friends (name) VALUES (?)";		// using placeholders(?) instead of direct insertion into database is a good security practice
+	$sql="INSERT INTO friends (name) VALUES (?)";		// [security purpose]: placeholders(?) to prevent SQL injections (you could also use mysqli_real_escape_string method)
 	    
 	//checking profanity before sending    			
 	$message = $name;					// profanity filter only accepts the variable name "message"
