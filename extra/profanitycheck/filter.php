@@ -1,8 +1,11 @@
 <?php 
+	//failure cases
+    	$exem = array("whole", "will", "other","mother","long","fell","best","face","star","ones","horn","chin","lock","full","test","phone","head"); 
+
 	//$message is the input from other phps
 
-	$list = file_get_contents("list/profan.txt");         
-	$list2 = file_get_contents("list/three.txt");	 
+	$list = file_get_contents("extra/profanitycheck/list/profan.txt");         
+	$list2 = file_get_contents("extra/profanitycheck/list/three.txt");	  
     	$exem2 = explode("\n",$list2);		  
 	
 	$me=explode(" ",$message);				  
@@ -27,6 +30,4 @@
 	    } 
 	$censored .= "$me[$i]"." ";  
 	}
-	//failure cases
-    	$exem = array("whole", "will", "other","mother","long","fell","best","face","star","ones","horn","chin","lock","full","test","phone","head"); 
 ?>
