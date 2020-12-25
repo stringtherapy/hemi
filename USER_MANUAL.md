@@ -1,4 +1,4 @@
-# Test the application on local server (any PC or Laptop):
+# Test the application on local server (Offline):
 
 **Pre-requisites**
 
@@ -26,7 +26,7 @@
 
 ---
 
-# Run the application as a private online messenger (chat with anyone):
+# Run the application as a private online messenger (Online):
 
 **Pre-requisites**
 
