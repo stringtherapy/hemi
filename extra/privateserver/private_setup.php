@@ -43,7 +43,7 @@ if(isset($_POST['create'])){
 		} else {
 				$presult= mysqli_fetch_array($search);
 				$chathistory = $presult['server_name'];
-				mysqli_query($conn,"INSERT INTO $chathistory (ID,name,message,time) values (NULL,'<b>bot</b>','<small><i>$_SESSION[name]</i> hopped onto the server</small>','')");
+				mysqli_query($conn,"INSERT INTO $chathistory (ID,name,message,time) values (NULL,'<b>bot</b>','&#128400<i><small><b> $_SESSION[name]</b> hopped onto the server</i></small>','')");
 				$_SESSION['server_name']=$chathistory;	
 				header('Location:../../text.php');
 				exit();
