@@ -13,14 +13,13 @@
 4. Open your browser and type `localhost` in URL 
 5. Navigate to **phpmyadmin** in the bottom-left corner
 6. Login with username: *root*, no password and MySQL as server
-7. On the left panel click **New** to create a database with the *name* of your choice  
-8. Navigate to **Import** on the top menu bar and **Choose File:** Browse `C:\wamp64\www\hemi-main\user\db.sql` and Click **Go** 
-9. Close your browser tabs
-10. Open the file `C:\wamp64\www\hemi-main\user\conn.php` using any text editor
+7. Navigate to **Import** on the top menu bar and **Choose File:** Browse `C:\wamp64\www\hemi-main\user\db.sql` and Click **Go** 
+8. Close your browser tabs
+9. Open the file `C:\wamp64\www\hemi-main\user\conn.php` using any text editor
 
 **User configuration**
 
-11. Configure your server with wamp defaults: ("*localhost*","*root*","","*name*",3306) <br>
+10. Configure your server with wamp defaults: ("*localhost*","*root*","","*name*",3306) <br>
 Note: You can also configure your preferred timezone in the same file ("*Continent*/*City*")
 
 **Type the URL:** `localhost/hemi-main/index.php` **to start using your application** 
