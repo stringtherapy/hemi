@@ -15,7 +15,7 @@ include('user/conn.php');					// importing user's database configuration
 if($_SERVER['REQUEST_METHOD'] == "POST")			// if user logs in
 {
     if(isset($_POST['name']) AND !empty($_POST['name'])){	// if the name entered by user is not empty 
-	$html = htmlspecialchars($_POST['name']);    		// [security purpose]: to prevent interpretation of html code
+	$name = htmlspecialchars($_POST['name']);    		// [security purpose]: to prevent interpretation of html code
 	    
 	//creating template before sending
 	$stmt = mysqli_stmt_init($conn);			
