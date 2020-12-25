@@ -18,7 +18,7 @@
 
 **User configuration**
 
-9. Check the file `C:\wamp64\www\hemi-main\user\conn.php` using any text editor
+9. Check the file `C:\wamp64\www\hemi-main\user\conn.php` using any text editor <br>
    Already configured with wamp defaults: ("*localhost*","*root*","","*hemi*",3306) <br>
    Note: You can also configure your preferred timezone in the same file ("*Continent*/*City*")
 
