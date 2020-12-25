@@ -14,10 +14,9 @@ $rand = $_SESSION['rand'];
 <?php 
 include('user/conn.php');
 
-$list=mysqli_query($conn,"SELECT * FROM chathistory ORDER BY ID ASC");
+$list=mysqli_query($conn,"SELECT * FROM $chathistory ORDER BY ID ASC");
 if (mysqli_num_rows($list)>0) {
     while($result=mysqli_fetch_array($list)){
-	$result['message'] = htmlspecialchars($result['message']);	
         if($_SESSION['name']==$result['name']){                 
           echo "<tr>
 	  <td>
@@ -59,7 +58,7 @@ echo"<body style=background-image:url(img/$rand.jpg);></body>";
 ?> 
                                            
 <?php                                                                 					 // code to detect mysql changes 
-$res = mysqli_query($conn,"SELECT count(1) FROM chathistory");         
+$res = mysqli_query($conn,"SELECT count(1) FROM $chathistory");         
 $row = mysqli_fetch_array($res);
 $total = $row[0];                                                       
 
@@ -71,7 +70,7 @@ if(!isset($_SESSION['count'])) {
 
      if($total > $check ) {                                                              		// detected a new entry in table 
         $check = $_SESSION['count'] = $total;								
-        $recent = mysqli_query($conn,"SELECT * FROM chathistory ORDER BY ID DESC LIMIT 1"); 
+        $recent = mysqli_query($conn,"SELECT * FROM $chathistory ORDER BY ID DESC LIMIT 1"); 
         $check=mysqli_fetch_array($recent);
         	if($_SESSION['name']==$check["name"]){                                             
             	//echo"<alert>message sent!</alert>";
