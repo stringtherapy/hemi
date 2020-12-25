@@ -1,10 +1,10 @@
 <?php
 //enter the four values to establish connection with your server
-$servername = "localhost";
-$username   = "root";
-$password   = "";
-$dbname     = "databasename";
-$portnumber = 3306;
+$servername    = "localhost";
+$username      = "root";
+$password      = "";
+$databasename  = "dbname";
+$portnumber    =  3306;
 
 $conn=mysqli_connect($servername,$username,$password,$dbname,$portnumber);
 
