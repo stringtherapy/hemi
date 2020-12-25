@@ -60,5 +60,5 @@
 **v0.2** <br>
 (26.12.2020)
 * new feature to choose between servers
-* improved source code
+* improved source code for personalised chat experience
 ---
