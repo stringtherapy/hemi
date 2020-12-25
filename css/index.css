@@ -7,3 +7,9 @@
     background-size: cover;
     background-image:url("https://source.unsplash.com/random/1136x640");
 }
+
+#login {
+color:white;
+text-shadow: 1px 1px 2px gray;
+font-size: 16px;
+}
