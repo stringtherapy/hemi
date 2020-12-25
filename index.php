@@ -5,7 +5,7 @@
 <link rel="stylesheet" href ="css/index.css"/>
 </head>
 
-<form action="index.php" method="post"><br><br><br>
+<form action="index.php" id="login" method="post"><br><br><br>
 <i>Hello</i>:<input type="text" name="name" value="">
 <input type="submit" value="welcome"><br><br>
 <input type="radio" name="server_type" value="PUBLIC" checked>Public Lobby &nbsp <input type="radio" name="server_type" value="PRIVATE">Private Lobby 
