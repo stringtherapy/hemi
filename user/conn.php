@@ -3,10 +3,10 @@
 $servername    = "localhost";
 $username      = "root";
 $password      = "";
-$databasename  = "dbname";
+$databasename  = "hemi";
 $portnumber    =  3306;
 
-$conn=mysqli_connect($servername,$username,$password,$dbname,$portnumber);
+$conn=mysqli_connect($servername,$username,$password,$databasename,$portnumber);
 
 if (!$conn)
 {
