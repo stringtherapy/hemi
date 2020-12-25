@@ -13,7 +13,8 @@ $rand = $_SESSION['rand'];
 <th></th>
 <?php 
 include('user/conn.php');
-
+include('extra/check_server_type.php');
+	
 $list=mysqli_query($conn,"SELECT * FROM $chathistory ORDER BY ID ASC");
 if (mysqli_num_rows($list)>0) {
     while($result=mysqli_fetch_array($list)){
