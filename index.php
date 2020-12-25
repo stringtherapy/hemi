@@ -6,8 +6,9 @@
 </head>
 
 <form action="index.php" method="post"><br><br><br>
-<i>Hello</i>:<input type="text" name="name" value=""><br><br>
+<i>Hello</i>:<input type="text" name="name" value="">
 <input type="submit" value="welcome">
+<input type="radio" name="server_type" value="PUBLIC" checked>Public Lobby &nbsp <input type="radio" name="server_type" value="PRIVATE">Private Lobby 
 </form>
 
 <?php
@@ -20,6 +21,8 @@ if($_SERVER['REQUEST_METHOD'] == "POST")			// if user logs in
 	//creating template before sending
 	$stmt = mysqli_stmt_init($conn);			
 	$sql="INSERT INTO friends (name) VALUES (?)";		// [security purpose]: placeholders(?) to prevent SQL injections (you could also use mysqli_real_escape_string method)
+	
+	$server_type=$_POST['server_type'];
 	    
 	//checking profanity before sending    			
 	$message = $name;					// profanity filter only accepts the variable name "message"
@@ -33,7 +36,18 @@ if($_SERVER['REQUEST_METHOD'] == "POST")			// if user logs in
 		if (mysqli_stmt_prepare($stmt,$sql)){		
 		mysqli_stmt_bind_param($stmt, "s", $name);
 		mysqli_stmt_execute($stmt);			// user's name is stored in database 
-		header('Location:text.php');			// user is redirected to text.php
+			
+		//redirecting based on server type	
+		if($server_type == "PUBLIC"){
+		unset($_SESSION['server_name']);
+		header('Location:text.php');
+		exit();}	
+		
+		else if($server_type == "PRIVATE"){
+		$_SESSION['private']=True;	
+		unset($_SESSION['server_name']);
+		include('extra/privateserver/private_setup.php');
+		}		
 		}
 	} else echo 'please try again';				// failure case: user entered a name containing profanity
     } else echo 'please enter a name'; 				// failure case: user didn't enter a name
