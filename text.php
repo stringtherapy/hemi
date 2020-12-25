@@ -37,7 +37,7 @@ if($_SERVER['REQUEST_METHOD']=="POST"){								// if user clicks "send"
   	$message=$_POST['message'];								// getting message              
 	$time=date("l h:i:sa");									// registering time
 
-    	include('extra/filter.php');  								// gets $message outputs $censored 
+    	include('extra/profanitycheck/filter.php');  								// gets $message outputs $censored 
 		
 		if(mysqli_stmt_prepare($stmt,$sql)){
 		   mysqli_stmt_bind_param($stmt, "sss", $name, $censored, $time);		// inserting name, cencored message and time into database
