@@ -75,7 +75,6 @@ if(!isset($_SESSION['count'])) {
         $recent = mysqli_query($conn,"SELECT * FROM $chathistory ORDER BY ID DESC LIMIT 1"); 
         $check=mysqli_fetch_array($recent);
         	if($_SESSION['name']==$check["name"]){                                             
-            	//echo"<alert>message sent!</alert>";
         	} else echo "<alert>new message from <i>$check[name]</i> &#8595;</alert><br>";		// generating notification 
 }
 ?>
