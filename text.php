@@ -13,7 +13,9 @@ include('extra/logincheck.php');
 
 <body onload="scrollWin()">
 <script type="text/javascript" src="script/jquery-3.3.1.min.js"></script>	
-<script src="user/refresh.js"></script>                                           
+<script src="user/refresh.js"></script>
+
+<input type="button" style="logout" onClick="location.href='extra/logout.php'" value="Logout">	
   
 <div id="Status" onload="scrollWin()"><br><br>
 <?php include('window.php'); ?><img src="user/loading_animation.gif" width="25px" height="25px" style="margin-left:20%;">
@@ -26,9 +28,10 @@ include('extra/logincheck.php');
 
 <?php
 include('user/conn.php');         
+include('extra/check_server_type.php');
 
 $stmt = mysqli_stmt_init($conn);
-$sql="INSERT INTO chathistory (name,message,time) VALUES (?, ?, ?)";          			// about to insert three values from user
+$sql  = "INSERT INTO $chathistory (name,message,time) VALUES (?, ?, ?)";          		// about to insert three values from user
 	
 if($_SERVER['REQUEST_METHOD']=="POST"){								// if user clicks "send"
 	if(isset($_POST['message']) AND !empty($_POST['message'])){           			// if user's message is not empty

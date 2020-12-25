@@ -52,3 +52,9 @@ height:90%;
 overflow:auto;
 -webkit-overflow-scrolling: touch;
 }    
+
+#logout{
+position:absolute;
+z-index:99;
+opacity:70%
+}
