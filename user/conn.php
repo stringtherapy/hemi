@@ -1,5 +1,5 @@
 <?php
-//enter the four values to establish connection with your server
+//enter the values to establish connection with your server
 $servername    = "localhost";
 $username      = "root";
 $password      = "";
