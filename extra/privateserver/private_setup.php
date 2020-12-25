@@ -23,7 +23,7 @@ if(isset($_POST['create'])){
 		$search=mysqli_query($conn,"SELECT * FROM private_servers WHERE lobby_key = '{$lobby_key}'");
 
 		if(mysqli_num_rows($search) == 0){
-			$chathistory = "ZDB_".$_SESSION['name']."_";	
+			$chathistory = "ZDB_".$_SESSION['name']."_".$lobby_key;	
 			$date = date("Y/m/d");
 			$ins="INSERT INTO private_servers (server_name,lobby_key,time) values ('$chathistory','$lobby_key','$date')";
 			mysqli_query($conn, $ins);
