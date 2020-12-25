@@ -15,12 +15,12 @@
 6. Login with username: *root*, no password and MySQL as server
 7. Navigate to **Import** on the top menu bar and **Choose File:** Browse `C:\wamp64\www\hemi-main\user\db.sql` and Click **Go** 
 8. Close your browser tabs
-9. Open the file `C:\wamp64\www\hemi-main\user\conn.php` using any text editor
 
 **User configuration**
 
-10. Configure your server with wamp defaults: ("*localhost*","*root*","","*name*",3306) <br>
-Note: You can also configure your preferred timezone in the same file ("*Continent*/*City*")
+9. Check the file `C:\wamp64\www\hemi-main\user\conn.php` using any text editor
+   Already configured with wamp defaults: ("*localhost*","*root*","","*hemi*",3306) <br>
+   Note: You can also configure your preferred timezone in the same file ("*Continent*/*City*")
 
 **Type the URL:** `localhost/hemi-main/index.php` **to start using your application** 
 
