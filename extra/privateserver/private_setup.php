@@ -8,13 +8,11 @@ if(!isset($_SESSION)){
 ?>
 
 <html>
-
 <form action='extra/privateserver/private_setup.php' id='login' method='post'><br><br><br>
 <i>Enter Key</i>: <input type='text' name='key' placeholder="invite anyone with this key"  pattern="(?=.*\d).{5,}" value=''> 
 <input type='submit' name='create' value="enter as <?php echo $_SESSION['name'] ?> "><br><br>
 minimum 5 characters with at least one number
 </form> 
-
 </html>
 
 <?php
