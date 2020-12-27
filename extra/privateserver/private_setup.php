@@ -1,5 +1,6 @@
 <?php
 include('private_check.php');
+include('../../user/conn.php');
 ?>
 
 <html>
@@ -11,7 +12,6 @@ Lobby Key: <input type='text' name='key' placeholder="e.g. mySpace3"  pattern="(
 </html>
 
 <?php
-$conn=mysqli_connect("localhost","root","","hemi",3306);
 if(isset($_POST['create'])){
 	if(isset($_POST['key']) AND !empty($_POST['key'])){
 		$lobby_key = htmlspecialchars($_POST['key']);
