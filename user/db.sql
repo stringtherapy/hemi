@@ -19,10 +19,12 @@ SET time_zone = "+00:00";
 
 --
 -- Database: `hemi`
---
+-- Note from Developer: The two sql lines below to create database might throw an error in online hosting websites.   
+-- in that case it is recommended to create database manually. You can remove the comment if you're using localhost, you won't get any error.
+/*
 CREATE DATABASE IF NOT EXISTS `hemi` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
 USE `hemi`;
-
+*/
 -- --------------------------------------------------------
 
 --
