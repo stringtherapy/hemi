@@ -23,7 +23,7 @@ echo "You're about to enter lobby: <b>".substr($_SESSION['server_name'], 4)."</b
 </div>
 </body>
 <?php 
-$conn=mysqli_connect("localhost","root","","hemi",3306);
+include('../../user/conn.php');
 if(isset($_POST['guest'])){
 mysqli_query($conn,"INSERT INTO $chathistory (ID,name,message,time) values (NULL,'<b>bot</b>','&#128400<i><small><b> $_SESSION[name]</b> hopped onto the lobby</i></small>','')");
 header('Location:../../text.php');

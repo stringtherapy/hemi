@@ -23,7 +23,7 @@ Set admin password: <input type = "password" name="pass" value = "" placeholder=
 </body>
 
 <?php 
-$conn=mysqli_connect("localhost","root","","hemi",3306);
+include('../../user/conn.php');
 if(isset($_POST['admin']) AND !empty($_POST['pass'])){
 			$lobby_key = $_SESSION['lobby_key'];
 			$password = sha1($_POST['pass']);
