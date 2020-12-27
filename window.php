@@ -14,8 +14,9 @@ $rand = $_SESSION['rand'];
 <?php 
 include('user/conn.php');
 include('extra/check_server_type.php');
-	
-$list=mysqli_query($conn,"SELECT * FROM chathistory ORDER BY ID ASC");
+
+if($list=mysqli_query($conn,"SELECT * FROM $chathistory ORDER BY ID ASC"))
+{
 if (mysqli_num_rows($list)>0) {
     while($result=mysqli_fetch_array($list)){
         if($_SESSION['name']==$result['name']){                 
@@ -36,6 +37,10 @@ if (mysqli_num_rows($list)>0) {
           </td>
           </tr>";
 	}
+}
+} else {
+echo "<h2 style=color:white;text-align:center;top:20%;>server:<i> " .substr($chathistory,4)."</i> no longer available &#129335<br><br> <small><a href=index.php style=color:white>click to exit</a></small></h2>" ;
+exit();
 }
 ?>
 </table>
@@ -74,6 +79,7 @@ if(!isset($_SESSION['count'])) {
         $recent = mysqli_query($conn,"SELECT * FROM $chathistory ORDER BY ID DESC LIMIT 1"); 
         $check=mysqli_fetch_array($recent);
         	if($_SESSION['name']==$check["name"]){                                             
+            	//echo"<alert>message sent!</alert>";
         	} else echo "<alert>new message from <i>$check[name]</i> &#8595;</alert><br>";		// generating notification 
 }
 ?>

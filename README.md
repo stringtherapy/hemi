@@ -43,22 +43,17 @@
 
 **Releases:** <br>
 
-**v0.1 - Alpha**<br>
+**v1.0.0 - Alpha**<br>
 (18.11.2020)
 * basic public server <br>
 
-**v0.1.1**<br>
+**v1.0.1**<br>
 (20.11.2020)
 * improved security <br> 
 * organized source code <br>
 
-**v0.1.2** <br>
+**v1.0.2** <br>
 (25.12.2020)
 * minor bug fixes <br> 
 * included documentation <br>
-
-**v0.2** <br>
-(26.12.2020)
-* new feature to choose between servers
-* improved source code for personalised chat experience
 ---
