@@ -41,7 +41,7 @@ Type admin password: <input type = "password" name="password" value = ""><br><br
 $date = date("Y/m/d");
 if($_SERVER['REQUEST_METHOD']=="POST" AND isset($_POST['option'])){		
 $option = $_POST['option'];
-$key = $_SESSION['lobby_key'];
+//$key = $_SESSION['lobby_key'];
 $password = sha1($_POST['password']);
 include('password_check.php');
 	if($match == "YES"){
