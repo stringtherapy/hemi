@@ -1,5 +1,12 @@
 <?php
 include('extra/logincheck.php');
+include('user/conn.php');  
+include('extra/check_server_type.php');
+
+if($chathistory != "chathistory"){
+	echo"<button style=position:absolute;z-index:99;right:5%;opacity:70%><a href=extra/privateserver/admin.php>Settings</a></button>";
+	include('extra/profanity_status.php');
+}
 ?>
 
 <html>
@@ -15,7 +22,7 @@ include('extra/logincheck.php');
 <script type="text/javascript" src="script/jquery-3.3.1.min.js"></script>	
 <script src="user/refresh.js"></script>
 
-<input type="button" style="logout" onClick="location.href='extra/logout.php'" value="Logout">	
+<input type="button" id="logout" onClick="location.href='extra/logout.php'" value="Logout">	
   
 <div id="Status" onload="scrollWin()"><br><br>
 <?php include('window.php'); ?><img src="user/loading_animation.gif" width="25px" height="25px" style="margin-left:20%;">
@@ -27,9 +34,7 @@ include('extra/logincheck.php');
 </form>
 
 <?php
-include('user/conn.php');         
-include('extra/check_server_type.php');
-
+       
 $stmt = mysqli_stmt_init($conn);
 $sql  = "INSERT INTO $chathistory (name,message,time) VALUES (?, ?, ?)";          		// about to insert three values from user
 	
@@ -39,11 +44,19 @@ if($_SERVER['REQUEST_METHOD']=="POST"){								// if user clicks "send"
     	$name=$_SESSION['name'];								// getting name
   	$message=$_POST['message'];								// getting message              
 	$time=date("l h:i:sa");									// registering time
-
-    	include('extra/profanitycheck/filter.php');  								// gets $message outputs $censored 
+ 
 		
+
+		if($chathistory == "chathistory" OR $profanity == "ON")
+		{
+			include('extra/profanitycheck/filter.php');  
+			$final_message = $censored;
+		} else $final_message = $message;
+
+
+
 		if(mysqli_stmt_prepare($stmt,$sql)){
-		   mysqli_stmt_bind_param($stmt, "sss", $name, $censored, $time);		// inserting name, cencored message and time into database
+		   mysqli_stmt_bind_param($stmt, "sss", $name, $final_message, $time);		// inserting name, cencored message and time into database
 		   mysqli_stmt_execute($stmt);
 		}
 	}

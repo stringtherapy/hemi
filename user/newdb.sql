@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Dec 25, 2020 at 04:24 PM
+-- Generation Time: Dec 27, 2020 at 09:52 AM
 -- Server version: 5.7.31
 -- PHP Version: 7.3.21
 
@@ -33,7 +33,7 @@ DROP TABLE IF EXISTS `chathistory`;
 CREATE TABLE IF NOT EXISTS `chathistory` (
   `ID` int(10) NOT NULL AUTO_INCREMENT,
   `name` varchar(40) NOT NULL,
-  `message` varchar(140) NOT NULL,
+  `message` varchar(350) NOT NULL,
   `time` varchar(40) NOT NULL,
   PRIMARY KEY (`ID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
@@ -69,7 +69,9 @@ CREATE TABLE IF NOT EXISTS `private_servers` (
   `ID` int(10) NOT NULL AUTO_INCREMENT,
   `server_name` varchar(40) NOT NULL,
   `lobby_key` varchar(140) NOT NULL,
+  `password` varchar(40) DEFAULT NULL,
   `time` varchar(40) NOT NULL,
+  `profanity` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`ID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 COMMIT;

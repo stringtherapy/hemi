@@ -1,0 +1,12 @@
+body{
+	background: #737373;
+}
+
+#message{
+	border: 1px solid white;
+	border-radius: 25px;
+	width: 400px;
+	padding: 30px;
+	margin: 50px auto;
+	opacity:0.85;
+}
