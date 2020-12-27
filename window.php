@@ -39,8 +39,8 @@ if (mysqli_num_rows($list)>0) {
 	}
 }
 } else {
-echo "<h2 style=color:white;text-align:center;top:20%;>server:<i> " .substr($chathistory,4)."</i> no longer available &#129335<br><br> <small><a href=index.php style=color:white>click to exit</a></small></h2>" ;
-exit();
+	echo "<h2 style=color:white;text-align:center;top:20%;>server:<i>".substr($chathistory,4)."</i> no longer available &#129335<br><br> <small><a href=index.php style=color:white>click to exit</a></small></h2>" ;
+	exit();
 }
 ?>
 </table>
