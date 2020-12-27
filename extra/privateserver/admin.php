@@ -1,6 +1,6 @@
 <?php
 include('admin_check.php');
-$conn=mysqli_connect("localhost","root","","hemi",3306);
+include('../../user/conn.php');
 include('../check_server_type.php');
 include('../profanity_status.php');
 ?>
