@@ -44,6 +44,7 @@ if (mysqli_num_rows($list)>0) {
 }
 ?>
 </table>
+
 	
 													<!-- code that changes background -->		
 <form action="" method="post">
@@ -72,15 +73,15 @@ if(!isset($_SESSION['count'])) {
         $check = $_SESSION['count'] = $total;
 } else {
         $check = $_SESSION['count'];
-}
+} 
 
      if($total > $check ) {                                                              		// detected a new entry in table 
         $check = $_SESSION['count'] = $total;								
         $recent = mysqli_query($conn,"SELECT * FROM $chathistory ORDER BY ID DESC LIMIT 1"); 
         $check=mysqli_fetch_array($recent);
         	if($_SESSION['name']==$check["name"]){                                             
-            	//echo"<alert>message sent!</alert>";
+            	//echo"<alert>message sent! by $check[name]</alert>";
         	} else echo "<alert>new message from <i>$check[name]</i> &#8595;</alert><br>";		// generating notification 
-}
+} 
 ?>
 </html>

@@ -16,6 +16,7 @@ $row2 = mysqli_fetch_array($result2);
 
 if($row1['ID']==$row2['ID']){
 	$match = "YES";  //success password match
+	$ID = $row1['ID'];
 } else $match = "no"; //wrong password; 
 } else $match = "no"; //no records found;
 ?>

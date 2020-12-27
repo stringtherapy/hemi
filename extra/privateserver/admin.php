@@ -39,7 +39,7 @@ Type admin password: <input type = "password" name="password" value = ""><br><br
 
 <?php 
 $date = date("Y/m/d");
-if($_SERVER['REQUEST_METHOD']=="POST"){	
+if($_SERVER['REQUEST_METHOD']=="POST" AND isset($_POST['option'])){		
 $option = $_POST['option'];
 $key = $_SESSION['lobby_key'];
 $password = sha1($_POST['password']);
@@ -96,7 +96,7 @@ include('password_check.php');
 			} 
 
 			else if ($profanity=="ON"){
-				mysqli_query($conn,"UPDATE private_servers SET profanity='0' WHERE server_name=$chathistory");
+				mysqli_query($conn,"UPDATE private_servers SET profanity='0' WHERE server_name='$chathistory'");
 				header('Location:../../text.php'); 
 			} 
 		}

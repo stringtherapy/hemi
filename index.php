@@ -51,6 +51,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")			// if user logs in
 		
 		else if($server_type == "PRIVATE"){
 		$_SESSION['private']=True;	
+		include('user/conn.php');
 		include('extra/privateserver/private_setup.php');
 		}		
 		}

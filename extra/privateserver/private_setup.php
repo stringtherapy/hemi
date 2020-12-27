@@ -1,6 +1,5 @@
 <?php
 include('private_check.php');
-include('../../user/conn.php');
 ?>
 
 <html>
@@ -13,6 +12,7 @@ Lobby Key: <input type='text' name='key' placeholder="e.g. mySpace3"  pattern="(
 
 <?php
 if(isset($_POST['create'])){
+	include('../../user/conn.php');
 	if(isset($_POST['key']) AND !empty($_POST['key'])){
 		$lobby_key = htmlspecialchars($_POST['key']);
 		$search=mysqli_query($conn,"SELECT * FROM private_servers WHERE lobby_key = '{$lobby_key}'");

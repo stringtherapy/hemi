@@ -24,7 +24,7 @@ Set admin password: <input type = "password" name="pass" value = "" placeholder=
 
 <?php 
 $conn=mysqli_connect("localhost","root","","hemi",3306);
-if(isset($_POST['admin'])){
+if(isset($_POST['admin']) AND !empty($_POST['pass'])){
 			$lobby_key = $_SESSION['lobby_key'];
 			$password = sha1($_POST['pass']);
 			$chathistory = "ZDB_".$_SESSION['name']."_".$lobby_key;	
@@ -50,7 +50,7 @@ if(isset($_POST['admin'])){
 				$_SESSION['server_name']=$chathistory;	
 				header('Location:../../text.php'); 
 			}
-}
+} else echo "Please enter a password";
 ?>
 
 </body>
