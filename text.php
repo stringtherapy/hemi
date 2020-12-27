@@ -44,16 +44,12 @@ if($_SERVER['REQUEST_METHOD']=="POST"){								// if user clicks "send"
     	$name=$_SESSION['name'];								// getting name
   	$message=$_POST['message'];								// getting message              
 	$time=date("l h:i:sa");									// registering time
- 
-		
 
 		if($chathistory == "chathistory" OR $profanity == "ON")
 		{
 			include('extra/profanitycheck/filter.php');  
 			$final_message = $censored;
 		} else $final_message = $message;
-
-
 
 		if(mysqli_stmt_prepare($stmt,$sql)){
 		   mysqli_stmt_bind_param($stmt, "sss", $name, $final_message, $time);		// inserting name, cencored message and time into database
