@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `chathistory` (
   `message` varchar(350) NOT NULL,
   `time` varchar(40) NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `chathistory`
