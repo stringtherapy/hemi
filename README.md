@@ -32,7 +32,9 @@
 
 ---
 
-**Demo:**  [https://hemi.ga] mobile friendly<br>
+**Demo:**  [https://hemi.ga] <br>
+ 
+ *mobile friendly. not optimized for desktop browsers
  
  Hosting service : *InfinityFree* <br>
  SSL Provider    : *Cloudflare* (end-to-end encryption) <br>
