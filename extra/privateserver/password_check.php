@@ -11,6 +11,6 @@ $row2 = mysqli_fetch_array($result2);
 if($row2['password']==$password){
 	$match = "YES";  
 	$ID = $row1['ID'];
-} //else echo "password dont match "; 
+}
 } 
 ?>
