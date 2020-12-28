@@ -48,7 +48,7 @@ include('password_check.php');
 //option one: admin can change server name:
 		if($option == "change"){
 			if(isset($_POST['newname']) AND !empty($_POST['newname'])){
-				$newname = $_POST['newname'];
+				$newname = mysqli_real_escape_string($conn,$_POST['newname']);
 				$search=mysqli_query($conn,"SELECT * FROM private_servers WHERE lobby_key = '{$newname}'");
 					if(mysqli_num_rows($search) == 0){
 						$dbname = "ZDB_".$_SESSION['name']."_".$newname;
