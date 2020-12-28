@@ -105,5 +105,6 @@ include('password_check.php');
 }
 ?>
 </div>
+<?php include('hints.php'); ?>
 </body>
 </html>
