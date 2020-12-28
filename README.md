@@ -60,5 +60,11 @@
 **v0.2** <br>
 (26.12.2020)
 * new feature to choose between servers
-* improved source code for personalised chat experience
+* improved source code 
+
+**v0.2.1** <br>
+(28.12.2020)
+* better user experience for private server
+* added admin settings 
+
 ---
