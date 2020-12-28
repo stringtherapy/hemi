@@ -58,7 +58,7 @@ include('password_check.php');
 							mysqli_query($conn,"INSERT INTO $dbname (ID,name,message,time) values (NULL,'<b>bot</b>','<small><i>$_SESSION[name]</i> updated the private server (key: $newname) on $date </small>','')");
 							$_SESSION['server_name'] = $dbname;
 							header('Location:../../text.php'); 
-						} 
+						} else echo "cant rename from ".$chathistory." to ".$dbname." because ".mysqli_error($conn); 
 					} else echo "lobby name already exists";
 			} else echo "no name entered";
 		} 
