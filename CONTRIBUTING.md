@@ -20,7 +20,7 @@ Refer [user/refresh.js] , the entire thread [window.php] is refreshed to display
 
   *Happy Coding!* &#128515;
 
-<h2> Core files </h2>
+<h2> Core files (public server) </h2>
 
 **index.php**  - Code for User login <br> 
 **text.php**   - Code for receiving text from User <br>
@@ -28,7 +28,7 @@ Refer [user/refresh.js] , the entire thread [window.php] is refreshed to display
 
 Note: window.php is embedded onto text.php
 
-<h2> Database Specifications </h2>
+<h2> Database Specifications (public server) </h2>
 
 **Table 1:** List of users (ID, name) <br>
 **Table 2:** Chat history  (ID, name, message, time) <br>
