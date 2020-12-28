@@ -51,7 +51,8 @@ if(isset($_POST['admin'])){
 				$_SESSION['server_name']=$chathistory;	
 				header('Location:../../text.php'); 
 			}
-}
+} 
+include('hints.php');
 ?>
 
 </body>
