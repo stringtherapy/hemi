@@ -14,7 +14,8 @@ Lobby Key: <input type='text' name='key' placeholder="e.g. mySpace3"  pattern="(
 if(isset($_POST['create'])){
 	include('../../user/conn.php');
 	if(isset($_POST['key']) AND !empty($_POST['key'])){
-		$lobby_key = htmlspecialchars($_POST['key']);
+		$key = htmlspecialchars($_POST['key']);
+		$lobby_key = mysqli_real_escape_string($conn,$key);
 		$search=mysqli_query($conn,"SELECT * FROM private_servers WHERE lobby_key = '{$lobby_key}'");
 
 		if(mysqli_num_rows($search) == 0){
