@@ -57,7 +57,6 @@ include('password_check.php');
 						if(mysqli_query($conn,$change) AND mysqli_query($conn,$update)){
 							mysqli_query($conn,"INSERT INTO $dbname (ID,name,message,time) values (NULL,'<b>bot</b>','<small><i>$_SESSION[name]</i> updated the private server (key: $newname) on $date </small>','')");
 							$_SESSION['server_name'] = $dbname;
-							$_SESSION['lobby_key'] = $newname;
 							header('Location:../../text.php'); 
 						} 
 					} else echo "lobby name already exists";
