@@ -40,6 +40,7 @@
 4. In the **Control Panel** click **MySQL Databases** to create a new database. 
 5. Click **admin** to open your server
 5. Navigate to **Import** on the top menu bar and **Choose File:** Browse your download folder for `hemi-main\user\db.sql` and Click **Go** 
+   <i>note: open db.sql and remove/comment code for database creation to avoid error</i>
 6. Close the tab after database is imported
 7. On the **online file manager** open `/htdocs/user/conn.php`
 
