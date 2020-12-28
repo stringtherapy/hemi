@@ -9,7 +9,9 @@ unset($_SESSION['server_name']);
 <title>Messenger</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href ="css/index.css"/>
+<script src="script/resub.js"></script>
 </head>
+
 
 <form action="index.php" id="login" method="post"><br><br><br>
 <i>Hello</i>:<input type="text" name="name" placeholder="type your name" value="" maxlength="25">
