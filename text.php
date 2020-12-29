@@ -43,7 +43,7 @@ if($_SERVER['REQUEST_METHOD']=="POST"){								// if user clicks "send"
 	if(isset($_POST['message']) AND !empty($_POST['message'])){           			// if user's message is not empty
 
     	$name=$_SESSION['name'];								// getting name
-  	$message=$_POST['message'];								// getting message              
+  	$message=htmlspecialchars($_POST['message']);								// getting message              
 	$time=date("l h:i:sa");									// registering time
 
 		if($chathistory == "chathistory" OR $profanity == "ON")
