@@ -4,7 +4,7 @@ include('private_check.php');
 
 <html>
 <form action='extra/privateserver/private_setup.php' id='login' method='post'><br><br><br>
-Lobby Key: <input type='text' name='key' placeholder="e.g. mySpace3"  pattern="(?=.*\d).{5,}" value='' maxlength='25'> 
+Lobby Key: <input type='text' name='key' placeholder="enter a valid name"  pattern="(?=.*\d).{5,}" value='' maxlength='25'> 
 <input type='submit' name='create' value="enter as <?php echo $_SESSION['name'] ?> "><br><br>
 <i>5 or more characters with at least one number</i>
 </form> 
