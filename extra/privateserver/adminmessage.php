@@ -37,7 +37,6 @@ if(isset($_POST['admin'])){
 			mysqli_stmt_bind_param($stmt, "ssss", $chathistory, $lobby_key, $password, $date);
 			mysqli_stmt_execute($stmt);
 			} 
-
 			
 			$tab = "CREATE TABLE $chathistory (
 			ID int(10) NOT NULL AUTO_INCREMENT,
