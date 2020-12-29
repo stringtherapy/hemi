@@ -72,7 +72,6 @@ include('password_check.php');
 
 			if(mysqli_query($conn,"TRUNCATE TABLE $chathistory")){
 				$oldname = substr($_SESSION['server_name'],4);
-				echo "chat history cleared";
 				$query2 = "INSERT INTO $chathistory (ID,name,message,time) values (NULL,'<b>bot</b>','<small> chat history of lobby <b>$oldname</b> was cleared by <i>$_SESSION[name]</i> on $date </small>','')";
 				mysqli_query($conn,$query1);
 				mysqli_query($conn,$query2);
