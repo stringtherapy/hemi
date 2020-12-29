@@ -6,7 +6,7 @@ $password      = "";
 $databasename  = "hemi";
 $portnumber    =  3306;
 
-$conn=mysqli_connect($servername,$username,$password,$databasename,$portnumber);
+$conn = mysqli_connect($servername,$username,$password,$databasename,$portnumber);
 
 if (!$conn)
 {
