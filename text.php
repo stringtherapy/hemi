@@ -3,6 +3,7 @@ include('extra/logincheck.php');
 include('user/conn.php');  
 include('extra/check_server_type.php');
 
+//private lobby users will get an extra button on the top right corner named "settings"
 if($chathistory != "chathistory"){
 	echo"<button style=position:absolute;z-index:99;right:5%;opacity:70%><a href=extra/privateserver/admin.php>Settings</a></button>";
 	include('extra/profanity_status.php');
@@ -46,10 +47,10 @@ if($_SERVER['REQUEST_METHOD']=="POST"){								// if user clicks "send"
 	$time=date("l h:i:sa");									// registering time
 
 		if($chathistory == "chathistory" OR $profanity == "ON")
-		{
+		{										// checking for profanity settings
 			include('extra/profanitycheck/filter.php');  
 			$final_message = $censored;
-		} else $final_message = $message;
+		} else  $final_message = $message;
 
 		if(mysqli_stmt_prepare($stmt,$sql)){
 		   mysqli_stmt_bind_param($stmt, "sss", $name, $final_message, $time);		// inserting name, cencored message and time into database
