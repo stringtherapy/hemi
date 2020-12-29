@@ -7,9 +7,8 @@ include('private_check.php');
 <title>Chat</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href ="../../css/private.css">
- <script src="script/resub.js"></script>
+<script src="script/resub.js"></script>
 </head>
-
 
 <body>
 <div id="message" style="background: #cc99ff;">
@@ -23,6 +22,7 @@ echo "You're about to enter lobby: <b>".substr($_SESSION['server_name'], 4)."</b
 </form>
 </div>
 </body>
+ 
 <?php 
 include('../../user/conn.php');
 if(isset($_POST['guest'])){
