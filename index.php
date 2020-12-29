@@ -38,7 +38,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")			// if user logs in
 	if ($check==0){						// the variable "check" indicates presence or absence of profanity
 		//session_start();				// beginning to store user info
 		$_SESSION['name']=$name;			// storing username as cookie
-    		$_SESSION['rand']=rand(1,25);			// generating and storing random number which will determine the default wallpaper of next page
+    		$_SESSION['rand']=rand(1,25);			// generating and storing random number which will determine the default wallpaper of chat page
 		
 		//sending value to database
 		if (mysqli_stmt_prepare($stmt,$sql)){		
