@@ -32,7 +32,7 @@
 
 ---
 
-**Demo:**  [https://hemi.ga] <br>
+**Demo:**  [https://hemi.ga]
  (mobile friendly, not optimized for desktop browsers)
  
  Hosting service : *InfinityFree* <br>
