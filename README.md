@@ -32,7 +32,7 @@
 
 ---
 
-**Demo:**  [https://hemi.ga]
+**Demo:**  [https://messenger101.epizy.com]
  (mobile friendly, not optimized for desktop browsers)
  
  Hosting service : *InfinityFree* <br>
