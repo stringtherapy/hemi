@@ -32,16 +32,6 @@
 
 ---
 
-**Demo:**  [http://messenger101.epizy.com]
- (mobile friendly, not optimized for desktop browsers)
- 
- Hosting service : *InfinityFree* <br>
- SSL Provider    : *Cloudflare* (end-to-end encryption) <br>
- Image sources   : *Unsplash, Pexels* 
-<br>
-
----
-
 **Releases:** <br>
 
 **v0.1 - Alpha**<br>
