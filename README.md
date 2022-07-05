@@ -1,4 +1,6 @@
-# hemi.ga
+# hemi
+
+![alt demo](https://github.com/stringtherapy/hemi/blob/main/img/demo.jpeg)
 
 <h2>Open Source Web Messenger</h2> 
 
