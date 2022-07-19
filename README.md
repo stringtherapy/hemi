@@ -27,6 +27,15 @@
 *No programming experience required. For detailed instructions follow [user_manual](https://github.com/stringtherapy/hemi/blob/main/USER_MANUAL.md)* 
 
 ---
+**Demo:**  [http://messengerdemo.epizy.com/]
+  (mobile friendly, not optimized for desktop browsers)
+
+ Hosting service : *InfinityFree* <br>
+ SSL Provider    : *Cloudflare* (end-to-end encryption) <br>
+ Image sources   : *Unsplash, Pexels* 
+<br>
+
+---
 
 **Contributing:** <br>
 
